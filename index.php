@@ -22,7 +22,6 @@
 
   <!--    CABEÇALHO   -->
   <div class="row cabecalho">
-
     <!-- LOGO -->
     <div class="col-md-4 col-sm-12 coluna-logo">
       <img src="frontend/images/header_logo.png" class="header_logo" alt="header_logo">
@@ -38,21 +37,44 @@
           <label for="pesquisar" class="label-pesquisar"><input class="search-input me-2" type="search" name="pesquisar" aria-label="Search"><i class="fas fa-1x fa-search"></i></label>
           <button class="btn btn-outline-success btn-pesquisar" type="submit">Search</button>
         </form>
-
       </div>
     </div>
-
-    <!-- PERFIL E CARRINHO DE COMPRAS -->
-    <div class="col-md-3 col-sm-12 col-xs-12">
-
-    </div>
   </div>
+  <!-- PERFIL E CARRINHO DE COMPRAS -->
+
   <!--    NAVBAR  -->
   <?php require_once('backend/share/navbar.php') ?>
   <!--    CARROSEL    -->
-
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" style="max-height:560px;">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="frontend/images/carrousel1.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="frontend/images/slider_pic2.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="frontend/images/slider_pic3.jpg" alt="Second slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
   <!--    LINHAS DE CHURRASQUEIRAS    -->
+  <pre>
 
+
+
+
+
+
+  </pre>
   <!--    PRODUTOS    -->
 
   <!--    APRESENTAÇÃO DA MARCA   -->
