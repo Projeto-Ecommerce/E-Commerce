@@ -123,7 +123,7 @@
 
 
 
-
+PRODUTOS
 
 
 
@@ -177,6 +177,49 @@
     </div>
   </section>
   <!--    APRESENTAÇÃO DA MARCA   -->
+  <div class="container ">
+    <div class="row apresentacao">
+      <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
+        <a href="" class="card-link">
+          <img class="card-img-top" src="frontend/images/02---EMPRESA_33.png" alt="imagem da Empresa">
+          <div class="card-body">
+            <p class="card-title">BREVE HISTÓRIA</p>
+            <p class="card-text">
+              Nossos produtos foram desenvolvidos dentro de um trailer de espetinho, o desenvolvimento do produto foi sendo realizado com o intuito de resolver problemas encontrados durante o uso.
+            </p>
+          </div>
+        </a>
+        <a href="#" class="card-link" id="linkHistory">SAIBA MAIS DA NOSSA HISTÓRIA</a>
+      </div>
+      <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
+        <a href="#" class="card-link">
+          <img class="card-img-top" src="frontend/images/brasil.png" alt="imagem da bandeira Brasileira">
+          <div class="card-body">
+            <p class="card-title">PRODUZIDO NO BRASIL</p>
+            <p class="card-text">
+              Nossos produtos foram desenvolvidos dentro de um trailer de espetinho, o desenvolvimento do produto foi sendo realizado com o intuito de resolver problemas encontrados durante o uso.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
+        <a href="#" class="card-link">
+          <img class="card-img-top" src="frontend/images/02---EMPRESA_28.jpg" alt="imagem da Empresa">
+          <div class="card-body">
+            <p class="card-title">PRODUTO PATENTEADO</p>
+            <p class="card-text">
+              Nossos produtos foram desenvolvidos dentro de um trailer de espetinho, o desenvolvimento do produto foi sendo realizado com o intuito de resolver problemas encontrados durante o uso.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="card col-12 col-sm-12 col-md-3">
+        <a href="" class="card-img">
+          <img id="imgCardSF" src="frontend/images/02---EMPRESA_18.png" alt="Imagem De Satisfação 100%">
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- RODAPÉ -->
 
