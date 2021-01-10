@@ -1,0 +1,61 @@
+/* CABECALHO */
+
+.cabecalho {
+  height: 300px;
+  width: 100%;
+}
+
+.coluna-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_logo {
+  width: 200px;
+  height: 180px;
+}
+
+.coluna-pesquisa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-pesquisa {
+  width: 90%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+.fa-search {
+  color: rgb(255, 94, 0);
+}
+
+.label-pesquisar {
+  border: 1px solid rgba(0, 0, 0, 0.342);
+  display: inline-block;
+  width: 90%;
+  height: 70%;
+  padding: 7px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  width: 93%;
+  height: 100%;
+}
+
+.btn-pesquisar {
+  display: none;
+}
+
+@media screen and (max-width: 760px) {
+  .label-pesquisar {
+    width: 90%;
+  }
+}

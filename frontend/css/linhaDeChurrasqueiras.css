@@ -1,0 +1,30 @@
+/* Linha de Churrasqueiras */
+#linhas-de-churrasqueiras {
+  /* margin-top: 10vh; */
+  background-image: url("../images/fundo-2010x2010.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #313131 !important;
+}
+.title-linhas {
+  font-family: Lobster;
+  font-weight: 400;
+  font-size: 38px;
+  text-align: center;
+  margin-top: 6vh;
+  margin-bottom: 10vh;
+}
+
+.banners {
+  text-align: center;
+}
+@media all and (min-width: 720px) {
+  #lnkBannerProfissional {
+    margin-left: 5% !important;
+  }
+}
+
+.imgLinhas {
+  width: 100%;
+  margin: 3vh auto;
+}

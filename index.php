@@ -12,6 +12,8 @@
   <!-- STYLE CSS -->
   <link rel="stylesheet" href="frontend/css/index.css">
   <link rel="stylesheet" href="frontend/css/navbarDesktop.css">
+  <link rel="stylesheet" href="frontend/css/cabecalho.css">
+  <link rel="stylesheet" href="frontend/css/linhaDeChurrasqueiras.css">
 
   <!-- FONTAWESOME -->
   <script src="https://kit.fontawesome.com/072fea83f9.js" crossorigin="anonymous"></script>
@@ -45,36 +47,53 @@
   <!--    NAVBAR  -->
   <?php require_once('backend/share/navbar.php') ?>
   <!--    CARROSEL    -->
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" style="max-height:560px;">
-      <div class="carousel-item active">
+  <div id="carousel" class="carousel slide" data-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active ">
         <img class="d-block w-100" src="frontend/images/carrousel1.jpg" alt="First slide">
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item ">
         <img class="d-block w-100" src="frontend/images/slider_pic2.jpg" alt="Second slide">
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item ">
         <img class="d-block w-100" src="frontend/images/slider_pic3.jpg" alt="Second slide">
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">Anterior</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">Próximo</span>
     </a>
   </div>
   <!--    LINHAS DE CHURRASQUEIRAS    -->
-  <pre>
+  <section id="linhas-de-churrasqueiras">
+    <div class="container">
+      <div class="row linhas">
+        <h1 class="title-linhas">
+          <div class=" col-8 col-sm-8 col-md-4" style="margin:auto">
+            Conheça nossas linhas
+          </div>
+        </h1>
+      </div>
+      <div class="row banners">
+        <div class="col-12 col-sm-12 col-md-6">
+          <a href="#" class="lnkBanners">
+            <img src="frontend/images/banner-residencial-v2.1.jpg" class="imgLinhas" alt="Banner Da Linha Residencial">
+          </a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+          <a href="#" id="lnkBannerProfissional">
+            <img src="frontend/images/banner-profissional-v2.1.jpg" class="imgLinhas" alt=" Banner Da Linha Profissional">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
-
-
-
-
-  </pre>
   <!--    PRODUTOS    -->
 
   <!--    APRESENTAÇÃO DA MARCA   -->
