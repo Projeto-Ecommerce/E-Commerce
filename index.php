@@ -91,6 +91,28 @@
           </a>
         </div>
       </div>
+      <div class="row icones">
+        <div class="col-12 col-sm-3">
+          <a href="javascript:void(0)">
+            <img src="frontend/images/ICONE_GOURMET.png" class="imgIcons" alt="Icone Gourmet">
+          </a>
+        </div>
+        <div class="col-12 col-sm-3">
+          <a href="javascript:void(0)">
+            <img src="frontend/images/ICONE_GIRATÓRIA EMBUTIR.png" class="imgIcons" alt="Icone GIRATÓRIA EMBUTIR">
+          </a>
+        </div>
+        <div class="col-12 col-sm-3">
+          <a href="javascript:void(0)">
+            <img src="frontend/images/ICONE_EMPREENDEDORES.png" class="imgIcons" alt="Icone ICONE_EMPREENDEDORES">
+          </a>
+        </div>
+        <div class="col-12 col-sm-3">
+          <a href="javascript:void(0)">
+            <img src="frontend/images/ICONE_FOOD TRUCK.png" class="imgIcons" alt="Icone FOOD TRUCK">
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
