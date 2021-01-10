@@ -131,11 +131,25 @@
 
 
 </pre>
-  <!--    APRESENTAÇÃO DA MARCA   -->
-
-  <!--    REDES SOCIAIS   -->
+  <!--   VIDEOS e REDES SOCIAIS   -->
   <section id="redesociais">
     <div class="container">
+      <div class="row videos">
+        <div class="row ">
+          <h1 class="col-12 col-sm-12 col-md-4 title-videos">Assista os vídeos
+            de nossas linhas</h1>
+        </div>
+        <div class="row apresentacaoVideos">
+          <div class="col-12 col-sm-12 col-md-12 linkVideos">
+            <iframe width="100%" class="iframeVideos" height="auto" src="https://www.youtube.com/embed/uAiQ85Bk9mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 linkVideos">
+            <iframe width="100%" class="iframeVideos" height="auto" src="https://www.youtube.com/embed/hWYQZjh2xYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+
+
       <div class="row title-midias">
         <h2>Mídias Sociais</h2>
         <h3>Acompanhe a Poligrill</h3>
@@ -162,6 +176,10 @@
       </div>
     </div>
   </section>
+  <!--    APRESENTAÇÃO DA MARCA   -->
+
+  <!-- RODAPÉ -->
+
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
