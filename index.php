@@ -117,11 +117,51 @@
   </section>
 
   <!--    PRODUTOS    -->
+  <pre>
 
+
+
+
+
+
+
+
+
+
+
+
+</pre>
   <!--    APRESENTAÇÃO DA MARCA   -->
 
   <!--    REDES SOCIAIS   -->
-
+  <section id="redesociais">
+    <div class="container">
+      <div class="row title-midias">
+        <h2>Mídias Sociais</h2>
+        <h3>Acompanhe a Poligrill</h3>
+      </div>
+      <div class="row mt-4 iframes">
+        <div class="col-12 col-sm-12 col-md-4 container-midias">
+          <div class="bgMidias">
+            <h1 class="face">Facebook</h1>
+          </div>
+          <iframe frameborder="0" class="iframeMidias" height="460" scrolling="no" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchurrasqueiraspoligrill%2F&amp;tabs=timeline&amp;width=340&amp;height=460&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=140674633269845" style="border: none; overflow: hidden;" width="340"></iframe>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 container-midias">
+          <div class="bgMidias">
+            <h1 class="face">Instagram</h1>
+          </div>
+          <p><iframe class="instagram-media instagram-media-rendered iframeMidias" id="instagram-embed-0" src="https://www.instagram.com/p/BgY0VMHHfwY/embed/captioned/?cr=1&amp;v=8&amp;wp=680&amp;rd=https%3A%2F%2Fpoligrill.com.br&amp;rp=%2Flinha-profissional.html#%7B%22ci%22%3A0%2C%22os%22%3A21244.464999996126%2C%22ls%22%3A21212.67500007525%2C%22le%22%3A21224.93499983102%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="785" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background: white; max-width: 340px; height: 460px; width: calc(100% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"></iframe></p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 container-midias">
+          <div class="bgMidias">
+            <h1 class="face">Youtube</h1>
+          </div>
+          <iframe frameborder="0" class="iframeMidias" height="460" id="ytplayer" src="https://www.youtube.com/embed/azCLDDL9gQ0?autoplay=0&amp;origin=https://example.com" width="340"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
