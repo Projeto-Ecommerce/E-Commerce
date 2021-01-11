@@ -3,6 +3,7 @@
 .cabecalho {
   height: 300px;
   width: 100%;
+  font-family: Roboto, sans-serif;
 }
 
 .coluna-logo {
@@ -19,6 +20,31 @@
 .coluna-pesquisa {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+.contato{
+  outline: none;
+  color: black;
+  font-style: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.contato:hover{
+  color: rgb(255, 60, 0);
+}
+
+.contato-row{
+  justify-content: center;
+}
+
+.contato-item{
+  display: flex;
   justify-content: center;
 }
 
@@ -38,7 +64,7 @@
 .label-pesquisar {
   border: 1px solid rgba(0, 0, 0, 0.342);
   display: inline-block;
-  width: 90%;
+  width: 100%;
   height: 70%;
   padding: 7px;
 }
@@ -50,12 +76,25 @@
   height: 100%;
 }
 
-.btn-pesquisar {
-  display: none;
+.search-button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
 }
 
 @media screen and (max-width: 760px) {
   .label-pesquisar {
     width: 90%;
+  }
+
+  .search-input {
+    display: none;
+  }
+
+  .label-pesquisar {
+    display: none;
+  }
+
+  .coluna-logo{
+    width: 100%;
   }
 }

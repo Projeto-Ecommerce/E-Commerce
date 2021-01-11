@@ -9,12 +9,16 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script  src = " https://unpkg.com/feather-icons "></script> 
   <!-- STYLE CSS -->
   <link rel="stylesheet" href="frontend/css/index.css">
   <link rel="stylesheet" href="frontend/css/navbarDesktop.css">
   <link rel="stylesheet" href="frontend/css/cabecalho.css">
   <link rel="stylesheet" href="frontend/css/linhaDeChurrasqueiras.css">
-
+  <!-- FONT-STYLE -->
+  <link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <!-- FAVICON -->
+  <link rel="icon" href="https://poligrill.com.br/media/favicon/websites/1/favicon.ico" type="image/x-icon">
   <!-- FONTAWESOME -->
   <script src="https://kit.fontawesome.com/072fea83f9.js" crossorigin="anonymous"></script>
   <title>E-Commerce</title>
@@ -25,19 +29,31 @@
   <!--    CABEÇALHO   -->
   <div class="row cabecalho">
     <!-- LOGO -->
-    <div class="col-md-4 col-sm-12 coluna-logo">
+    <div class="col-md-3 col-sm-12 coluna-logo">
       <img src="frontend/images/header_logo.png" class="header_logo" alt="header_logo">
     </div>
 
     <!-- PESQUISA E REDES SOCIAIS -->
-    <div class="col-md-5 col-sm-12 coluna-pesquisa">
-      <div class="row contato">
+    <div class="col-md-6 col-sm-12 coluna-pesquisa">
+      <div class="row contato-row mb-md-5 me-md-5">
 
+        <div class="col-md-4 contato-item">
+        <a href="#" class="contato"><img class="icones-contato" src="frontend/images/icone-whats.png" coalt="icone-waths">(19) 98675-1255</a>
+        
+        </div>
+
+        <div class="col-md-4 contato-item">
+        <a href="#" class="contato"><img class="icones-contato" src="frontend/images/icone-tel.png" alt="icone-tel">(19) 3442-1515</a>
+        </div>
+
+        <div class="col-md-4 col-sm-12 contato-item">
+        <a href="#" class="contato ms-5"><img class="icones-contato" src="frontend/images/icone-email.png" alt="icone-email"> churrascosbom@gmail.com</a>
+        </div>
+        
       </div>
       <div class="row row-pesquisa">
         <form class="d-flex form-pesquisa">
-          <label for="pesquisar" class="label-pesquisar"><input class="search-input me-2" type="search" name="pesquisar" aria-label="Search"><i class="fas fa-1x fa-search"></i></label>
-          <button class="btn btn-outline-success btn-pesquisar" type="submit">Search</button>
+          <label for="pesquisar" class="label-pesquisar"><input class="search-input me-2" type="search" name="pesquisar" aria-label="Search"><button class="search-button" type="submit"><i class="fas fa-1x fa-search"></i></button></label>
         </form>
       </div>
     </div>
