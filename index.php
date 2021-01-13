@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="frontend/css/navbarDesktop.css">
   <link rel="stylesheet" href="frontend/css/cabecalho.css">
   <link rel="stylesheet" href="frontend/css/linhaDeChurrasqueiras.css">
+  <link rel="stylesheet" href="frontend/css/produtos.css">
   <!-- FONT-STYLE -->
   <link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <!-- FAVICON -->
@@ -133,20 +134,34 @@
   </section>
 
   <!--    PRODUTOS    -->
-  <pre>
+
+<div class="container">
+  <div class="col-md-9">
+
+    <div class="col-md-3"></div>
+
+    <div class="col-md-3"></div>
+
+    <div class="col-md-3"></div>
+
+  </div>
+  <div class="col-md-3 col-sm-12 categorias-col">
+    <ul>
+      <li class="categorias-head">CATEGORIAS</li>
+      <li class="categorias-item">Churrasqueiras Residenciais</li>
+      <li class="categorias-item">Churrasqueiras Profissionais</li>
+      <li class="categorias-item">Grill Giratório</li>
+      <li class="categorias-item">Acessórios</li>
+      <li class="categorias-item">Fotos e Vídeos</li>
+      <li class="categorias-item">Catálogo</li>
+      <li class="categorias-item">Manuais</li>
+      <li class="categorias-item">Empresa</li>
+      <li class="categorias-item">Contato</li>
+    </ul>
+  </div>
+</div>
 
 
-
-
-
-PRODUTOS
-
-
-
-
-
-
-</pre>
   <!--   VIDEOS e REDES SOCIAIS   -->
   <section id="redesociais">
     <div class="container">

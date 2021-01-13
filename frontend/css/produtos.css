@@ -1,0 +1,27 @@
+.categorias-col{
+    display: flex;
+}
+.categorias-head{
+    list-style: none;
+    display: block;
+    background: #000000;
+    padding: 14px 36px 16px 29px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Ebrima', sans-serif;
+    font-style: inhe;
+}
+.categorias-item{
+    list-style: none;
+    display: block;
+    background: #f9f9f9;
+    padding: 14px 36px 16px 29px;
+    color: #888;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgb(212, 212, 212);
+    font-family: 'Ebrima', sans-serif;
+}
