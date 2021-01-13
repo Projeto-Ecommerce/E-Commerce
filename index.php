@@ -9,18 +9,22 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script  src = " https://unpkg.com/feather-icons "></script> 
+  <script src=" https://unpkg.com/feather-icons "></script>
   <!-- STYLE CSS -->
   <link rel="stylesheet" href="frontend/css/index.css">
   <link rel="stylesheet" href="frontend/css/navbarDesktop.css">
   <link rel="stylesheet" href="frontend/css/cabecalho.css">
   <link rel="stylesheet" href="frontend/css/linhaDeChurrasqueiras.css">
+  <link rel="stylesheet" href="frontend/css/newNavCss.css">
+
   <!-- FONT-STYLE -->
   <link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <!-- FAVICON -->
   <link rel="icon" href="https://poligrill.com.br/media/favicon/websites/1/favicon.ico" type="image/x-icon">
   <!-- FONTAWESOME -->
   <script src="https://kit.fontawesome.com/072fea83f9.js" crossorigin="anonymous"></script>
+  <!--navbar  -->
+  <script src="frontend/javascript/navbar.js"></script>
   <title>E-Commerce</title>
 </head>
 
@@ -38,18 +42,18 @@
       <div class="row contato-row mb-md-5 me-md-5">
 
         <div class="col-md-4 contato-item">
-        <a href="#" class="contato"><img class="icones-contato" src="frontend/images/icone-whats.png" coalt="icone-waths">(19) 98675-1255</a>
-        
+          <a href="#" class="contato"><img class="icones-contato" src="frontend/images/icone-whats.png" coalt="icone-waths">(19) 98675-1255</a>
+
         </div>
 
         <div class="col-md-4 contato-item">
-        <a href="#" class="contato"><img class="icones-contato" src="frontend/images/icone-tel.png" alt="icone-tel">(19) 3442-1515</a>
+          <a href="#" class="contato"><img class="icones-contato" src="frontend/images/icone-tel.png" alt="icone-tel">(19) 3442-1515</a>
         </div>
 
         <div class="col-md-4 col-sm-12 contato-item">
-        <a href="#" class="contato ms-5"><img class="icones-contato" src="frontend/images/icone-email.png" alt="icone-email"> churrascosbom@gmail.com</a>
+          <a href="#" class="contato ms-5"><img class="icones-contato" src="frontend/images/icone-email.png" alt="icone-email"> churrascosbom@gmail.com</a>
         </div>
-        
+
       </div>
       <div class="row row-pesquisa">
         <form class="d-flex form-pesquisa">
@@ -134,7 +138,6 @@
 
   <!--    PRODUTOS    -->
   <pre>
-
 
 
 
@@ -239,18 +242,9 @@ PRODUTOS
 
   <!-- RODAPÉ -->
 
-  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- meus scripts -->
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
-
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- jquery, bs4 e popper -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
