@@ -135,32 +135,47 @@
 
   <!--    PRODUTOS    -->
 
-<div class="container">
-  <div class="col-md-9">
-
-    <div class="col-md-3"></div>
-
-    <div class="col-md-3"></div>
-
-    <div class="col-md-3"></div>
-
-  </div>
+<div class="container mt-5">
   <div class="col-md-3 col-sm-12 categorias-col">
-    <ul>
-      <li class="categorias-head">CATEGORIAS</li>
-      <li class="categorias-item">Churrasqueiras Residenciais</li>
-      <li class="categorias-item">Churrasqueiras Profissionais</li>
-      <li class="categorias-item">Grill Giratório</li>
-      <li class="categorias-item">Acessórios</li>
-      <li class="categorias-item">Fotos e Vídeos</li>
-      <li class="categorias-item">Catálogo</li>
-      <li class="categorias-item">Manuais</li>
-      <li class="categorias-item">Empresa</li>
-      <li class="categorias-item">Contato</li>
+    <ul class="categorias-list">
+      <li class="categorias-head"><span><h5><b>CATEGORIAS</b></h5></span></li>
+      <li class="categorias-item">
+        <a class="categorias-link-dropdown" href="#">Churrasqueiras Residenciais</a>
+        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Churrasqueira para Embutir a Carvão</a></li>
+          <li><a class="dropdown-item" href="#">Churrasqueira Portátil a Carvão</a></li>
+        </ul>
+      </li>
+      <li class="categorias-item">
+      <a class="categorias-link-dropdown" href="#">Churrasqueiras Profissionais</a>
+        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Churrasqueira para Embutir a Carvão</a></li>
+          <li><a class="dropdown-item" href="#">Churrasqueira Portátil a Carvão</a></li>
+        </ul>
+      </li>
+      <li class="categorias-item"><a class="categorias-link">Grill Giratório</a></li>
+
+      <li class="categorias-item"><a class="categorias-link-dropdown" href="#">Acessórios</a>
+        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Grelha Argentina</a></li>
+          <li><a class="dropdown-item" href="#">Espeto</a></li>
+          <li><a class="dropdown-item" href="#">Grelha Moeda</a></li>
+          <li><a class="dropdown-item" href="#">Anti Chama</a></li>
+          <li><a class="dropdown-item" href="#">Pazinha Raspadora</a></li>
+          <li><a class="dropdown-item" href="#">Peças de Reposição</a></li>
+        </ul>
+      </li>
+      <li class="categorias-item"><a class="categorias-link" href="#">Fotos e Vídeos</a></li>
+      <li class="categorias-item"><a class="categorias-link" href="#">Catálogo</a></li>
+      <li class="categorias-item"><a class="categorias-link" href="#">Manuais</a></li>
+      <li class="categorias-item"><a class="categorias-link" href="#">Empresa</a></li>
+      <li class="categorias-item"><a class="categorias-link" href="#">Contato</a></li>
     </ul>
   </div>
 </div>
-
 
   <!--   VIDEOS e REDES SOCIAIS   -->
   <section id="redesociais">
