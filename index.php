@@ -136,44 +136,81 @@
   <!--    PRODUTOS    -->
 
 <div class="container mt-5">
-  <div class="col-md-3 col-sm-12 categorias-col">
-    <ul class="categorias-list">
-      <li class="categorias-head"><span><h5><b>CATEGORIAS</b></h5></span></li>
-      <li class="categorias-item">
-        <a class="categorias-link-dropdown" href="#">Churrasqueiras Residenciais</a>
-        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Churrasqueira para Embutir a Carvão</a></li>
-          <li><a class="dropdown-item" href="#">Churrasqueira Portátil a Carvão</a></li>
-        </ul>
-      </li>
-      <li class="categorias-item">
-      <a class="categorias-link-dropdown" href="#">Churrasqueiras Profissionais</a>
-        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Churrasqueira para Embutir a Carvão</a></li>
-          <li><a class="dropdown-item" href="#">Churrasqueira Portátil a Carvão</a></li>
-        </ul>
-      </li>
-      <li class="categorias-item"><a class="categorias-link">Grill Giratório</a></li>
+  <div class="row">
+      
+    <div class="col-md-3 col-sm-12 categorias-col">
+      <ul class="categorias-list">
+        <li class="categorias-head"><span><h5><b>CATEGORIAS</b></h5></span></li>
+        <li class="categorias-item">
+          <a class="categorias-link-dropdown" href="#">Churrasqueiras Residenciais</a>
+          <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Churrasqueira para Embutir a Carvão</a></li>
+            <li><a class="dropdown-item" href="#">Churrasqueira Portátil a Carvão</a></li>
+          </ul>
+        </li>
+        <li class="categorias-item">
+        <a class="categorias-link-dropdown" href="#">Churrasqueiras Profissionais</a>
+          <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Churrasqueira para Embutir a Carvão</a></li>
+            <li><a class="dropdown-item" href="#">Churrasqueira Portátil a Carvão</a></li>
+          </ul>
+        </li>
+        <li class="categorias-item"><a class="categorias-link">Grill Giratório</a></li>
 
-      <li class="categorias-item"><a class="categorias-link-dropdown" href="#">Acessórios</a>
-        <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Grelha Argentina</a></li>
-          <li><a class="dropdown-item" href="#">Espeto</a></li>
-          <li><a class="dropdown-item" href="#">Grelha Moeda</a></li>
-          <li><a class="dropdown-item" href="#">Anti Chama</a></li>
-          <li><a class="dropdown-item" href="#">Pazinha Raspadora</a></li>
-          <li><a class="dropdown-item" href="#">Peças de Reposição</a></li>
-        </ul>
-      </li>
-      <li class="categorias-item"><a class="categorias-link" href="#">Fotos e Vídeos</a></li>
-      <li class="categorias-item"><a class="categorias-link" href="#">Catálogo</a></li>
-      <li class="categorias-item"><a class="categorias-link" href="#">Manuais</a></li>
-      <li class="categorias-item"><a class="categorias-link" href="#">Empresa</a></li>
-      <li class="categorias-item"><a class="categorias-link" href="#">Contato</a></li>
-    </ul>
+        <li class="categorias-item"><a class="categorias-link-dropdown" href="#">Acessórios</a>
+          <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Grelha Argentina</a></li>
+            <li><a class="dropdown-item" href="#">Espeto</a></li>
+            <li><a class="dropdown-item" href="#">Grelha Moeda</a></li>
+            <li><a class="dropdown-item" href="#">Anti Chama</a></li>
+            <li><a class="dropdown-item" href="#">Pazinha Raspadora</a></li>
+            <li><a class="dropdown-item" href="#">Peças de Reposição</a></li>
+          </ul>
+        </li>
+        <li class="categorias-item"><a class="categorias-link" href="#">Fotos e Vídeos</a></li>
+        <li class="categorias-item"><a class="categorias-link" href="#">Catálogo</a></li>
+        <li class="categorias-item"><a class="categorias-link" href="#">Manuais</a></li>
+        <li class="categorias-item"><a class="categorias-link" href="#">Empresa</a></li>
+        <li class="categorias-item"><a class="categorias-link" href="#">Contato</a></li>
+      </ul>
+    </div>
+    <div class="col-md-9">
+      <div class="tittle-produtos"><span><h5><b>PRODUTOS</b></h5></span></div>
+    
+      <div class="col-md-2">
+        <div class="card" style="width: 18rem;">
+          <img src="frontend/images/header_logo.png" class="card-img-top" alt="churrasqueira_de_embutir">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+      <div class="card" style="width: 18rem;">
+          <img src="frontend/images/header_logo.png" class="card-img-top" alt="churrasqueira_de_embutir">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+      <div class="card" style="width: 18rem;">
+          <img src="frontend/images/header_logo.png" class="card-img-top" alt="churrasqueira_de_embutir">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      </div>
   </div>
 </div>
 
