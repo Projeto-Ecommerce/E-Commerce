@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="frontend/css/cabecalho.css">
   <link rel="stylesheet" href="frontend/css/linhaDeChurrasqueiras.css">
   <link rel="stylesheet" href="frontend/css/newNavCss.css">
-  <link rel="stylesheet" href="frontend/css/produtos.css">
+
   <!-- FONT-STYLE -->
   <link href="//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
   <!-- FAVICON -->
@@ -137,199 +137,117 @@
   </section>
 
   <!--    PRODUTOS    -->
-  <<<<<<< HEAD <pre>
+  <pre>
 
 
 
 
-    PRODUTOS
+PRODUTOS
 
 
 
-    =======
-    >>>>>>> 0867d591ca14ece6a78e77365f0fb53b0173bb7d
 
-    <div class="container mt-5">
-      <div class="row">
 
-        <div class="col-md-3 col-sm-12 categorias-col">
-          <ul class="categorias-list">
-            <li class="categorias-head"><span>
-                <h5><b>CATEGORIAS</b></h5>
-              </span></li>
-            <li class="categorias-item">
-              <a class="categorias-link-dropdown" href="#">Churrasqueiras Residenciais</a>
-              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Churrasqueira para Embutir a Carvão</a></li>
-                <li><a class="dropdown-item" href="#">Churrasqueira Portátil a Carvão</a></li>
-              </ul>
-            </li>
-            <li class="categorias-item">
-              <a class="categorias-link-dropdown" href="#">Churrasqueiras Profissionais</a>
-              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Churrasqueira para Embutir a Carvão</a></li>
-                <li><a class="dropdown-item" href="#">Churrasqueira Portátil a Carvão</a></li>
-              </ul>
-            </li>
-            <li class="categorias-item"><a class="categorias-link">Grill Giratório</a></li>
 
-            <li class="categorias-item"><a class="categorias-link-dropdown" href="#">Acessórios</a>
-              <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"></a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Grelha Argentina</a></li>
-                <li><a class="dropdown-item" href="#">Espeto</a></li>
-                <li><a class="dropdown-item" href="#">Grelha Moeda</a></li>
-                <li><a class="dropdown-item" href="#">Anti Chama</a></li>
-                <li><a class="dropdown-item" href="#">Pazinha Raspadora</a></li>
-                <li><a class="dropdown-item" href="#">Peças de Reposição</a></li>
-              </ul>
-            </li>
-            <li class="categorias-item"><a class="categorias-link" href="#">Fotos e Vídeos</a></li>
-            <li class="categorias-item"><a class="categorias-link" href="#">Catálogo</a></li>
-            <li class="categorias-item"><a class="categorias-link" href="#">Manuais</a></li>
-            <li class="categorias-item"><a class="categorias-link" href="#">Empresa</a></li>
-            <li class="categorias-item"><a class="categorias-link" href="#">Contato</a></li>
-          </ul>
+</pre>
+  <!--   VIDEOS e REDES SOCIAIS   -->
+  <section id="redesociais">
+    <div class="container">
+      <div class="row videos">
+        <div class="row ">
+          <h1 class="col-12 col-sm-12 col-md-4 title-videos">Assista os vídeos
+            de nossas linhas</h1>
         </div>
-        <div class="col-md-9">
-          <div class="tittle-produtos"><span>
-              <h5><b>PRODUTOS</b></h5>
-            </span></div>
+        <div class="row apresentacaoVideos">
+          <div class="col-12 col-sm-12 col-md-12 linkVideos">
+            <iframe width="100%" class="iframeVideos" height="auto" src="https://www.youtube.com/embed/uAiQ85Bk9mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+          <div class="col-12 col-sm-12 col-md-12 linkVideos">
+            <iframe width="100%" class="iframeVideos" height="auto" src="https://www.youtube.com/embed/hWYQZjh2xYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
 
-          <div class="col-md-2">
-            <div class="card" style="width: 18rem;">
-              <img src="frontend/images/header_logo.png" class="card-img-top" alt="churrasqueira_de_embutir">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+
+      <div class="row title-midias">
+        <h2>Mídias Sociais</h2>
+        <h3>Acompanhe a Poligrill</h3>
+      </div>
+      <div class="row mt-4 iframes">
+        <div class="col-12 col-sm-12 col-md-4 container-midias">
+          <div class="bgMidias">
+            <h1 class="face">Facebook</h1>
           </div>
-          <div class="col-md-2">
-            <div class="card" style="width: 18rem;">
-              <img src="frontend/images/header_logo.png" class="card-img-top" alt="churrasqueira_de_embutir">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+          <iframe frameborder="0" class="iframeMidias" height="460" scrolling="no" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchurrasqueiraspoligrill%2F&amp;tabs=timeline&amp;width=340&amp;height=460&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=140674633269845" style="border: none; overflow: hidden;" width="340"></iframe>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 container-midias">
+          <div class="bgMidias">
+            <h1 class="face">Instagram</h1>
           </div>
-          <div class="col-md-2">
-            <div class="card" style="width: 18rem;">
-              <img src="frontend/images/header_logo.png" class="card-img-top" alt="churrasqueira_de_embutir">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+          <p><iframe class="instagram-media instagram-media-rendered iframeMidias" id="instagram-embed-0" src="https://www.instagram.com/p/BgY0VMHHfwY/embed/captioned/?cr=1&amp;v=8&amp;wp=680&amp;rd=https%3A%2F%2Fpoligrill.com.br&amp;rp=%2Flinha-profissional.html#%7B%22ci%22%3A0%2C%22os%22%3A21244.464999996126%2C%22ls%22%3A21212.67500007525%2C%22le%22%3A21224.93499983102%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="785" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background: white; max-width: 340px; height: 460px; width: calc(100% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"></iframe></p>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 container-midias">
+          <div class="bgMidias">
+            <h1 class="face">Youtube</h1>
           </div>
+          <iframe frameborder="0" class="iframeMidias" height="460" id="ytplayer" src="https://www.youtube.com/embed/azCLDDL9gQ0?autoplay=0&amp;origin=https://example.com" width="340"></iframe>
         </div>
       </div>
     </div>
-
-    <!--   VIDEOS e REDES SOCIAIS   -->
-    <section id="redesociais">
-      <div class="container">
-        <div class="row videos">
-          <div class="row ">
-            <h1 class="col-12 col-sm-12 col-md-4 title-videos">Assista os vídeos
-              de nossas linhas</h1>
+  </section>
+  <!--    APRESENTAÇÃO DA MARCA   -->
+  <div class="container ">
+    <div class="row apresentacao">
+      <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
+        <a href="" class="card-link">
+          <img class="card-img-top" src="frontend/images/02---EMPRESA_33.png" alt="imagem da Empresa">
+          <div class="card-body">
+            <p class="card-title">BREVE HISTÓRIA</p>
+            <p class="card-text">
+              Nossos produtos foram desenvolvidos dentro de um trailer de espetinho, o desenvolvimento do produto foi sendo realizado com o intuito de resolver problemas encontrados durante o uso.
+            </p>
           </div>
-          <div class="row apresentacaoVideos">
-            <div class="col-12 col-sm-12 col-md-12 linkVideos">
-              <iframe width="100%" class="iframeVideos" height="auto" src="https://www.youtube.com/embed/uAiQ85Bk9mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            </div>
-            <div class="col-12 col-sm-12 col-md-12 linkVideos">
-              <iframe width="100%" class="iframeVideos" height="auto" src="https://www.youtube.com/embed/hWYQZjh2xYY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row title-midias">
-          <h2>Mídias Sociais</h2>
-          <h3>Acompanhe a Poligrill</h3>
-        </div>
-        <div class="row mt-4 iframes">
-          <div class="col-12 col-sm-12 col-md-4 container-midias">
-            <div class="bgMidias">
-              <h1 class="face">Facebook</h1>
-            </div>
-            <iframe frameborder="0" class="iframeMidias" height="460" scrolling="no" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fchurrasqueiraspoligrill%2F&amp;tabs=timeline&amp;width=340&amp;height=460&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=140674633269845" style="border: none; overflow: hidden;" width="340"></iframe>
-          </div>
-          <div class="col-12 col-sm-12 col-md-4 container-midias">
-            <div class="bgMidias">
-              <h1 class="face">Instagram</h1>
-            </div>
-            <p><iframe class="instagram-media instagram-media-rendered iframeMidias" id="instagram-embed-0" src="https://www.instagram.com/p/BgY0VMHHfwY/embed/captioned/?cr=1&amp;v=8&amp;wp=680&amp;rd=https%3A%2F%2Fpoligrill.com.br&amp;rp=%2Flinha-profissional.html#%7B%22ci%22%3A0%2C%22os%22%3A21244.464999996126%2C%22ls%22%3A21212.67500007525%2C%22le%22%3A21224.93499983102%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="785" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background: white; max-width: 340px; height: 460px; width: calc(100% - 2px); border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"></iframe></p>
-          </div>
-          <div class="col-12 col-sm-12 col-md-4 container-midias">
-            <div class="bgMidias">
-              <h1 class="face">Youtube</h1>
-            </div>
-            <iframe frameborder="0" class="iframeMidias" height="460" id="ytplayer" src="https://www.youtube.com/embed/azCLDDL9gQ0?autoplay=0&amp;origin=https://example.com" width="340"></iframe>
-          </div>
-        </div>
+        </a>
+        <a href="#" class="card-link" id="linkHistory">SAIBA MAIS DA NOSSA HISTÓRIA</a>
       </div>
-    </section>
-    <!--    APRESENTAÇÃO DA MARCA   -->
-    <div class="container ">
-      <div class="row apresentacao">
-        <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
-          <a href="" class="card-link">
-            <img class="card-img-top" src="frontend/images/02---EMPRESA_33.png" alt="imagem da Empresa">
-            <div class="card-body">
-              <p class="card-title">BREVE HISTÓRIA</p>
-              <p class="card-text">
-                Nossos produtos foram desenvolvidos dentro de um trailer de espetinho, o desenvolvimento do produto foi sendo realizado com o intuito de resolver problemas encontrados durante o uso.
-              </p>
-            </div>
-          </a>
-          <a href="#" class="card-link" id="linkHistory">SAIBA MAIS DA NOSSA HISTÓRIA</a>
-        </div>
-        <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
-          <a href="#" class="card-link">
-            <img class="card-img-top" src="frontend/images/brasil.png" alt="imagem da bandeira Brasileira">
-            <div class="card-body">
-              <p class="card-title">PRODUZIDO NO BRASIL</p>
-              <p class="card-text">
-                Nossos produtos foram desenvolvidos dentro de um trailer de espetinho, o desenvolvimento do produto foi sendo realizado com o intuito de resolver problemas encontrados durante o uso.
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
-          <a href="#" class="card-link">
-            <img class="card-img-top" src="frontend/images/02---EMPRESA_28.jpg" alt="imagem da Empresa">
-            <div class="card-body">
-              <p class="card-title">PRODUTO PATENTEADO</p>
-              <p class="card-text">
-                Nossos produtos foram desenvolvidos dentro de um trailer de espetinho, o desenvolvimento do produto foi sendo realizado com o intuito de resolver problemas encontrados durante o uso.
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="card col-12 col-sm-12 col-md-3">
-          <a href="" class="card-img">
-            <img id="imgCardSF" src="frontend/images/02---EMPRESA_18.png" alt="Imagem De Satisfação 100%">
-          </a>
-        </div>
+      <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
+        <a href="#" class="card-link">
+          <img class="card-img-top" src="frontend/images/brasil.png" alt="imagem da bandeira Brasileira">
+          <div class="card-body">
+            <p class="card-title">PRODUZIDO NO BRASIL</p>
+            <p class="card-text">
+              Nossos produtos foram desenvolvidos dentro de um trailer de espetinho, o desenvolvimento do produto foi sendo realizado com o intuito de resolver problemas encontrados durante o uso.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
+        <a href="#" class="card-link">
+          <img class="card-img-top" src="frontend/images/02---EMPRESA_28.jpg" alt="imagem da Empresa">
+          <div class="card-body">
+            <p class="card-title">PRODUTO PATENTEADO</p>
+            <p class="card-text">
+              Nossos produtos foram desenvolvidos dentro de um trailer de espetinho, o desenvolvimento do produto foi sendo realizado com o intuito de resolver problemas encontrados durante o uso.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="card col-12 col-sm-12 col-md-3">
+        <a href="" class="card-img">
+          <img id="imgCardSF" src="frontend/images/02---EMPRESA_18.png" alt="Imagem De Satisfação 100%">
+        </a>
       </div>
     </div>
+  </div>
 
-    <!-- RODAPÉ -->
+  <!-- RODAPÉ -->
 
-    <!-- meus scripts -->
+  <!-- meus scripts -->
 
-    <!-- jquery, bs4 e popper -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- jquery, bs4 e popper -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
