@@ -1,73 +1,82 @@
-.navbarDesk {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.dropitem:hover {
-  border-bottom: 2px solid red;
-}
-
-.dropdownDesk:hover {
-  border-bottom: 2px solid red;
-}
-.navbarDesk a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-style: normal;
-  font-size: 13px;
-}
-
-.dropdownDesk {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdownDesk .dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin-right: 1vw;
-  font-size: 13px;
-  margin: 0;
-}
-
-.navbarDesk a:hover,
-.dropdownDesk:hover .dropbtn {
-  background-color: rgba(255, 255, 255, 0.11);
-}
-
-.dropdown-contentDesk {
+#navDesktop {
   display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 100px;
-  max-width: 230px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  margin-right: 1vw;
 }
+@media only screen and (min-width: 600px) {
+  #navDesktop {
+    display: block;
+  }
+  .navbarDesk {
+    overflow: hidden;
+    background-color: #333;
+    z-index: 2;
+  }
 
-.dropdown-contentDesk a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+  .dropitem:hover {
+    border-bottom: 2px solid red;
+  }
 
-.dropdown-contentDesk a:hover {
-  background-color: #ddd;
-}
+  .dropdownDesk:hover {
+    border-bottom: 2px solid red;
+  }
+  .navbarDesk a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 20px 15px 20px;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 13px;
+  }
 
-.dropdownDesk:hover .dropdown-contentDesk {
-  display: block;
+  .dropdownDesk {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdownDesk .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 20px 15px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin-right: 1vw;
+    font-size: 13px;
+    margin: 0;
+  }
+
+  .navbarDesk a:hover,
+  .dropdownDesk:hover .dropbtn {
+    background-color: rgba(255, 255, 255, 0.11);
+  }
+
+  .dropdown-contentDesk {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    max-width: 230px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-right: 1vw;
+  }
+
+  .dropdown-contentDesk a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-contentDesk a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdownDesk:hover .dropdown-contentDesk {
+    display: block;
+  }
 }
