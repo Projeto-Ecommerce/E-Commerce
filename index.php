@@ -140,94 +140,57 @@
 
   <!--    PRODUTOS    -->
   <section id="produtos">
-    <div id="container-nav-produtos">
-      <div class="body-navProdutos">
-        <nav class="accordion arrows">
-          <header class="box" id="categorias">
-            <label for="acc-close" class="box-title">CATEGORIAS</label>
-            <!-- <i class="fas fa-plus-circle" id="Cmais"></i> -->
-            <!-- <i class="fas fa-minus-circle" id="Cmenos"></i> -->
-          </header>
-          <input type="radio" name="accordion" id="cb-p1" />
-          <section class="box">
-            <label class="box-title" for="cb-p1">Churrasqueiras Residenciais</label>
-            <label class="box-close" for="acc-close"></label>
-            <div class="box-content container dropdown">
+    <div class="container" style="margin-left: 0.5vh;margin-top: 5vh;">
+      <div class="row">
+        <?php include_once('backend/share/produtosNavigation.php') ?>
+        <!--    CARDS PRODUTOS    -->
+        <div class="card-produtos col-md-3" onmouseover="hoverCards(0)" onmouseout="outCards(0)">
+          <img class="card-img-top slide-card-img" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
+          <img class="card-img-top slide-card-img" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <div class="card-body">
+            <div class="thz-content navigation-imgs" style="max-width:100%">
               <div class="row">
-                <a href="javascript:void(0)" class="link-nvMobile col-12">Churrasqueiras para Embutir a Carvão</a>
+                <div class="col-md-4 col-4">
+                  <img class="navImg selected-nav" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(1)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(2)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(3)">
+                </div>
               </div>
-              <div class="row">
-                <a href="javascript:void(0)" class="link-nvMobile col-12">Churrasqueiras Portátil a Carvão</a>
-              </div>
-            </div>
-          </section>
-          <input type="radio" name="accordion" id="cb-p2" />
-          <section class="box">
-            <label class="box-title" for="cb-p2">Churrasqueiras Profissionais</label>
-            <label class="box-close" for="acc-close"></label>
-            <div class="box-content container dropdown">
-              <div class="row">
-                <a href="javascript:void(0)" class="link-nvMobile col-12">Churrasqueira p/ Espetinho a Carvão para Balcão</a>
-              </div>
-              <div class="row">
-                <a href="javascript:void(0)" class="link-nvMobile col-12">Churrasqueira p/ Espetinho a Carvão Portátil</a>
-              </div>
-            </div>
-          </section>
-          <input type="radio" name="accordion" id="cb-p3" />
-          <section class="box">
-            <a href="javascript:void(0)" class="box-title-ndrop">Grill Giratório</a>
-          </section>
-          <input type="radio" name="accordion" id="cb-p4" />
-          <section class="box">
-            <a href="javascript:void(0)"></a><label class="box-title" for="cb-p4">Acessórios</label></a>
-            <label class="box-close" for="acc-close"></label>
-            <div class="box-content container dropdown">
-              <div class="row">
-                <a href="javascript:voi(0)" class="link-nvMobile col-12">Grelha Argentina</a>
-              </div>
-              <div class="row">
-                <a href="javascript:voi(0)" class="link-nvMobile col-12">Espeto</a>
-              </div>
-
-              <div class="row">
-                <a href="javascript:voi(0)" class="link-nvMobile col-12">Grelha Moeda</a>
-              </div>
-
-              <div class="row">
-                <a href="javascript:voi(0)" class="link-nvMobile col-12">Anti Chama</a>
-              </div>
-              <div class="row">
-                <a href="javascript:voi(0)" class="link-nvMobile col-12">Pazinha Raspadora</a>
-              </div>
-              <div class="row">
-                <a href="javascript:voi(0)" class="link-nvMobile col-12">Peças de Reposição</a>
+              <div class="row mt-1">
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(4)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(5)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(6)">
+                </div>
               </div>
             </div>
-          </section>
-          <input type="radio" name="accordion" id="cb-p5" />
-          <section class="box">
-            <a href="javascript:void(0)" class="box-title-ndrop">Fotos e Vídeos</a>
-          </section>
-          <input type="radio" name="accordion" id="cb-p6" />
-          <section class="box">
-            <a href="javascript:void(0)" class="box-title-ndrop">Catálago</a>
-          </section>
-          <input type="radio" name="accordion" id="cb-p7" />
-          <section class="box">
-            <a href="javascript:void(0)" class="box-title-ndrop">Manuais</a>
-          </section>
-          <input type="radio" name="accordion" id="cb-p8" />
-          <section class="box">
-            <a href="javascript:void(0)" class="box-title-ndrop">Empresa</a>
-          </section>
-          <input type="radio" name="accordion" id="cb-p9" />
-          <section class="box">
-            <a href="javascript:void(0)" class="box-title-ndrop">Contato</a>
-          </section>
-
-          <input type="radio" name="accordion" id="acc-close" />
-        </nav>
+            <div class="row card-title mt-4">
+              <p>Churrasqueira Espetinho Giratório Inox a Carvão - Balcão c/ 2 Grill Giratório p/ 39 espetinhos - PoliGrill - M20G3B2IC</p>
+            </div>
+            <div class="row card-info">
+              <p class="pol-code">Cod. PoliGrill M20G3B2IC</p>
+              <p class="custo">12x <span class="greenMoneyIndicator">395,83</span> s/ juros</p>
+              <p class="preco" name="preco">R$4.750,00</p>
+              <p class="precoDep">ou R$ 4.512,00 via depósito</p>
+            </div>
+            <div class="row buyAndDetails">
+              <a href="javascript:void(0)" class="col-md-2 details"><i class="fas fa-plus-circle" id="Cmais"></i>DETALHES</a>
+              <a href="javascript:void(0)" class="col-md-6 buy" id="btn-buy"><i class="fas fa-shopping-cart"></i>COMPRAR</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
