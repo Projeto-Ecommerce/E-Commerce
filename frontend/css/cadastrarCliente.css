@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-block{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/fundo-2010x2010.jpg");
+}
+
+.container-content{
+    width: 80%;
+    height: 80%;
+    border-radius: 3px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;
+    font-family: Roboto, sans-serif;
+    font-size: 80%;
+}
+
+.inputText{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    width: 90%;
+    padding: 5px;
+}
+
+.inputText:hover{
+    animation-name: inputFocus;
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+}
+
+@keyframes inputFocus{
+    from {
+        border-bottom: 1px solid black;
+    }
+
+    to{
+        border-bottom: 1px solid rgb(255, 94, 0);
+    }
+}
