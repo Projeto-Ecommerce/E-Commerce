@@ -32,13 +32,19 @@
 
     <!--   CADASTRO     -->
 
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-5" href="../../index.php"><img src="../images/header_logo.png" class="logo" alt="Banner Logo"></a>
+
+  </div>
+</nav>
     <div class="container-block">
       <div class="container-content">
         <div class="container">
           <div class="row">
 
-            <div class="col-md-6 form-col mt-5">
-              <form action="#" method="post">
+            <div class="col-md-6 form-col mt-md-5">
+              <form action="../../backend/functions/cadastroInit.php" method="post">
                 <input type="text" name="nome" placeholder="Nome Completo" class="inputText">
                 <input type="email" name="email" placeholder="E-mail" class="inputText mt-5">
                 <input type="text" name="cpf" placeholder="CPF" id="cpf" class="smallInput inputText mt-5" maxlength="14">
