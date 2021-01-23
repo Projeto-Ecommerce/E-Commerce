@@ -231,7 +231,7 @@
   font-weight: 800;
 }
 .navigation-imgs {
-  display: none;
+  display: block;
 }
 .card-info p {
   margin-top: -17px;
@@ -239,7 +239,7 @@
 
 /* #################### */
 .buyAndDetails {
-  display: none;
+  display: block;
 }
 .buy,
 .details {

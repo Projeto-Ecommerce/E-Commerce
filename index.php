@@ -144,35 +144,132 @@
       <div class="row">
         <?php include_once('backend/share/produtosNavigation.php') ?>
         <!--    CARDS PRODUTOS    -->
-        <div class="card-produtos col-md-3" onmouseover="hoverCards(0)" onmouseout="outCards(0)">
-          <img class="card-img-top slide-card-img" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
-          <img class="card-img-top slide-card-img" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+        <!-- card 1 -->
+        <div class="card-produtos col-md-3">
+          <img class="card-img-top slide-card-img1 selected-img-top" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
+          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
           <div class="card-body">
             <div class="thz-content navigation-imgs" style="max-width:100%">
               <div class="row">
                 <div class="col-md-4 col-4">
-                  <img class="navImg selected-nav" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(1)">
+                  <img class="navImg selected-nav" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(1,1)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(2)">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(2,1)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(3)">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(3,1)">
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(4)">
+                  <img class="navImg" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(4,1)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(5)">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(5,1)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(6)">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(6,1)">
+                </div>
+              </div>
+            </div>
+            <div class="row card-title mt-4">
+              <p>Churrasqueira Espetinho Giratório Inox a Carvão - Balcão c/ 2 Grill Giratório p/ 39 espetinhos - PoliGrill - M20G3B2IC</p>
+            </div>
+            <div class="row card-info">
+              <p class="pol-code">Cod. PoliGrill M20G3B2IC</p>
+              <p class="custo">12x <span class="greenMoneyIndicator">395,83</span> s/ juros</p>
+              <p class="preco" name="preco">R$4.750,00</p>
+              <p class="precoDep">ou R$ 4.512,00 via depósito</p>
+            </div>
+            <div class="row buyAndDetails">
+              <a href="javascript:void(0)" class="col-md-2 details"><i class="fas fa-plus-circle" id="Cmais"></i>DETALHES</a>
+              <a href="javascript:void(0)" class="col-md-6 buy" id="btn-buy"><i class="fas fa-shopping-cart"></i>COMPRAR</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card-produtos col-md-3" >
+          <img class="card-img-top slide-card-img2 selected-img-top" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
+          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <div class="card-body">
+            <div class="thz-content navigation-imgs" style="max-width:100%">
+              <div class="row">
+                <div class="col-md-4 col-4">
+                  <img class="navImg selected-nav" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(0,2)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(1,2)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(2,2)">
+                </div>
+              </div>
+              <div class="row mt-1">
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(3,2)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(4,2)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(5,2)">
+                </div>
+              </div>
+            </div>
+            <div class="row card-title mt-4">
+              <p>Churrasqueira Espetinho Giratório Inox a Carvão - Balcão c/ 2 Grill Giratório p/ 39 espetinhos - PoliGrill - M20G3B2IC</p>
+            </div>
+            <div class="row card-info">
+              <p class="pol-code">Cod. PoliGrill M20G3B2IC</p>
+              <p class="custo">12x <span class="greenMoneyIndicator">395,83</span> s/ juros</p>
+              <p class="preco" name="preco">R$4.750,00</p>
+              <p class="precoDep">ou R$ 4.512,00 via depósito</p>
+            </div>
+            <div class="row buyAndDetails">
+              <a href="javascript:void(0)" class="col-md-2 details"><i class="fas fa-plus-circle" id="Cmais"></i>DETALHES</a>
+              <a href="javascript:void(0)" class="col-md-6 buy" id="btn-buy"><i class="fas fa-shopping-cart"></i>COMPRAR</a>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card-produtos col-md-3">
+          <img class="card-img-top slide-card-img3 selected-img-top" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
+          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <div class="card-body">
+            <div class="thz-content navigation-imgs" style="max-width:100%">
+              <div class="row">
+                <div class="col-md-4 col-4">
+                  <img class="navImg selected-nav" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(0,3)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(1,3)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(2,3)">
+                </div>
+              </div>
+              <div class="row mt-1">
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(3,3)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(4,3)">
+                </div>
+                <div class="col-md-4 col-4">
+                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(5,3)">
                 </div>
               </div>
             </div>

@@ -1,11 +1,11 @@
 // cardSlides Produtos
-function imgAtual(n) {
-  mostraImg((slideIndex = n));
+function imgAtual(n, nSlider) {
+  mostraImg((slideIndex = n), nSlider);
 }
 
-function mostraImg(n) {
+function mostraImg(n, nSlider) {
   var i;
-  var imgTop = document.getElementsByClassName("slide-card-img");
+  var imgTop = document.getElementsByClassName("slide-card-img" + nSlider);
   var imgNav = document.getElementsByClassName("navImg");
   if (n > imgTop.length) {
     slideIndex = 1;
@@ -24,17 +24,18 @@ function mostraImg(n) {
     });
   }
   imgTop[slideIndex - 1].style.display = "block";
+  imgTop[slideIndex - 1].className += " selected-img-top";
 }
 
-var containerNav = document.getElementsByClassName("navigation-imgs");
-var rowBtnsBuyNDetails = document.getElementsByClassName("buyAndDetails");
-function hoverCards(indice) {
-  containerNav[indice].style.display = "block";
-  rowBtnsBuyNDetails[indice].style.display = "inline-flex";
-}
-function outCards(indice) {
-  containerNav[indice].style.display = "none";
-  rowBtnsBuyNDetails[indice].style.display = "none";
-}
+// var containerNav = document.getElementsByClassName("navigation-imgs");
+// var rowBtnsBuyNDetails = document.getElementsByClassName("buyAndDetails");
+// function hoverCards(indice) {
+//   containerNav[indice].style.display = "block";
+//   rowBtnsBuyNDetails[indice].style.display = "inline-flex";
+// }
+// function outCards(indice) {
+//   containerNav[indice].style.display = "none";
+//   rowBtnsBuyNDetails[indice].style.display = "none";
+// }
 
 // fim cardSlides
