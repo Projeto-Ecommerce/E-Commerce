@@ -49,7 +49,7 @@
                 <input type="email" name="email" placeholder="E-mail" class="inputText mt-5">
                 <input type="text" name="cpf" placeholder="CPF" id="cpf" class="smallInput inputText mt-5" maxlength="14">
                 <input type="date" name="nascimento" class="dataNascimento mt-5">
-                <input type="text" name="celular" placeholder="Celular" class="mt-5 smallInput">
+                <input type="text" name="celular" placeholder="Celular ddd + numero" class="mt-5 smallInput">
                 <div class="row mt-5">
                   <button type="submit" name="btn-cadastrar-first" class="botao-cadastrar"><span class="btnText">PRÓXIMO <i class="fas fa-angle-right"></i></span><i class="wrongIcon fas fa-angle-right"></i></button>
                 </div>
