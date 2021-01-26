@@ -49,7 +49,7 @@
                 <input type="email" name="email" placeholder="E-mail" class="inputText mt-5">
                 <input type="text" name="cpf" placeholder="CPF" id="cpf" class="smallInput inputText mt-5" maxlength="14">
                 <input type="date" name="nascimento" class="dataNascimento mt-5">
-                <input type="text" name="celular" placeholder="Celular ddd + numero" class="mt-5 smallInput">
+                <input type="text" name="celular" placeholder="Celular ddd + numero" maxlength="13" class="mt-5 smallInput">
                 <div class="row mt-5">
                   <button type="submit" name="btn-cadastrar-first" class="botao-cadastrar"><span class="btnText">PRÓXIMO <i class="fas fa-angle-right"></i></span><i class="wrongIcon fas fa-angle-right"></i></button>
                 </div>
@@ -57,16 +57,10 @@
             </div>
 
             <div class="col-md-6 mt-5">
-              <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../images/banner-profissional-v2.1.jpg" class="d-block w-100" alt="Linha Profissional">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../images/banner-residencial-v2.1.jpg" class="d-block w-100" alt="Linha Residencial">
-                  </div>
-                </div>
+              <div class="row">
+              <i class="far fa-clipboard"></i>
               </div>
+            </div>
 
           </div>
         </div>
