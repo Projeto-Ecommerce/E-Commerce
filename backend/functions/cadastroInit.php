@@ -42,6 +42,18 @@ if(isset($_POST['btn-cadastrar-first'])){
     $celular = substr($celular, 2, 11);
     $celular = $ddd.$celular;
 
+    $filtraCpf[0] = substr($cpf, 0,3);
+
+    $filtraCpf[1] = substr($cpf, 3,3);
+
+    $filtraCpf[2] = substr($cpf, 6,3);
+
+    $filtraCpf[3] = substr($cpf, 9, 2);
+
+    $cpfCorrecao = $filtraCpf[0].'.'.$filtraCpf[1].'.'.$filtraCpf[2].'-'. $filtraCpf[3];
+
+    
+
     if(!empty($cpf) && !empty($email) && !empty($nome) && !empty($celular)){
         
         if(substr($cpf, 0, 3) == substr($cpf, 3,3)){
@@ -110,8 +122,9 @@ if(isset($_POST['btn-cadastrar-first'])){
                     echo "CPF VALIDO!";
 
                     $_SESSION['nome'] = $nome;
+                    $_SESSION['cpf'] = $cpfCorrecao;
 
-                    header('Location: ../../frontend/pages/segundoCadastroCliente.php');
+                    // header('Location: ../../frontend/pages/segundoCadastroCliente.php');
                 }
             }
         }
@@ -135,15 +148,7 @@ if(isset($_POST['btn-cadastrar-first'])){
 
 <?php
 
-    $filtraCpf[0] = substr($cpf, 0,3);
 
-    $filtraCpf[1] = substr($cpf, 3,3);
-
-    $filtraCpf[2] = substr($cpf, 6,3);
-
-    $filtraCpf[3] = substr($cpf, 9, 2);
-
-    $cpf = $filtraCpf[0].'.'.$filtraCpf[1].'.'.$filtraCpf[2].'-'. $filtraCpf[3];
 
     echo "<br> $cpf <br> $email <br> $nome <br> $celular <br> $ddd";
 }

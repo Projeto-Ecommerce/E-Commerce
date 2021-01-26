@@ -57,10 +57,16 @@
             </div>
 
             <div class="col-md-6 mt-5">
-              <div class="row">
-              <i class="far fa-clipboard"></i>
+              <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../images/banner-profissional-v2.1.jpg" class="d-block w-100" alt="Linha Profissional">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/banner-residencial-v2.1.jpg" class="d-block w-100" alt="Linha Residencial">
+                  </div>
+                </div>
               </div>
-            </div>
 
           </div>
         </div>
