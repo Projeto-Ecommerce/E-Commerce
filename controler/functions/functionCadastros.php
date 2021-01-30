@@ -1,69 +1,22 @@
 <?php
 
-session_start();
+namespace controler\functions\functionsCadastros;
 
-//  LIMPAR CAMPOS 
-function clear($input) {
-    
-    $var = str_replace(')', "", $input);
-    $var = str_replace('  ', " ", $var);
-    $var = str_replace(',', "", $var);
-    $var = str_replace('(', "", $var);
-    $var = str_replace('.', "", $var);
-    $var = str_replace(';', "", $var);
-    $var = str_replace('[', "", $var);
-    $var = str_replace(']', "", $var);
-    $var = str_replace('0', "", $var);
-    $var = str_replace('1', "", $var);
-    $var = str_replace('2', "", $var);
-    $var = str_replace('3', "", $var);
-    $var = str_replace('4', "", $var);
-    $var = str_replace('5', "", $var);
-    $var = str_replace('6', "", $var);
-    $var = str_replace('7', "", $var);
-    $var = str_replace('8', "", $var);
-    $var = str_replace('9', "", $var);
-//  XSS
-    $var = htmlspecialchars($var);
-    return $var;
-}
-
-if(isset($_POST['btn-cadastrar-first'])){
-
-//  VERIFICA CPF
-
-
-    
-    $cpf = preg_replace('/[^0-9]/',"",$_POST['cpf']);    
-    $email = htmlspecialchars($_POST['email']);
-    $nome = clear($_POST['nome']);
-    $celular = preg_replace('/[^0-9]/',"",$_POST['celular']);
-    $ddd = '('.substr($celular, 0, 2).')';
-    $celular = substr($celular, 2, 11);
-    $celular = $ddd.$celular;
-
-    $filtraCpf[0] = substr($cpf, 0,3);
-
-    $filtraCpf[1] = substr($cpf, 3,3);
-
-    $filtraCpf[2] = substr($cpf, 6,3);
-
-    $filtraCpf[3] = substr($cpf, 9, 2);
-
-    $cpfCorrecao = $filtraCpf[0].'.'.$filtraCpf[1].'.'.$filtraCpf[2].'-'. $filtraCpf[3];
-
-    
-
-    if(!empty($cpf) && !empty($email) && !empty($nome) && !empty($celular)){
-        
+Class clienteFunctions {
+     
+    //  VERIFICAÇÃO DE CPF
+    function verificaCpf($cpf) {
         if(substr($cpf, 0, 3) == substr($cpf, 3,3)){
-            // CPF INVALIDO
+            // CPF INVALIDO / ERRO 1 = CPF INVALIDO
             header('Location: erroCadastro.php?erro=1');
+            return false;
+
         }else {
             if (strlen($cpf) != 11) {
-                //  MENSAGEM DE ERRO POR CPF ERRADO
+                //  TAMANHO DO CPF INVALIDO
                 header('Location: erroCadastro.php?erro=1');
                 return false;
+
             }else{
         
                 $i = 0;
@@ -121,34 +74,52 @@ if(isset($_POST['btn-cadastrar-first'])){
                     
                     echo "CPF VALIDO!";
 
+                    $verificaBanco = new 
                     $_SESSION['nome'] = $nome;
                     $_SESSION['cpf'] = $cpfCorrecao;
+                    session_destroy();
 
                     // header('Location: ../../frontend/pages/segundoCadastroCliente.php');
                 }
             }
         }
-    }else {
-        header('Location: erroCadastro?erro=2');
     }
+    // INSERÇÃO NO DB
+    function cadastrarCliente(Cliente $c) {
+        // VERIFICA DE O CPF JÁ FOI CADASTRADO 
+        $sql = "SELECT * FROM cliente WHERE cpfCliente = ?";
 
-    
-    
+        $stmt = Conn::getConn()->prepare($sql);
+        $stmt->bindValue(1, $c->getCpf());
+        
+        $resultado = $stmt->execute();
 
-    // echo "<br>$soma<br>"; 
+        if($resultado == NULL){
+            // FAZ A INSERÇÃO NO BANDO DE DADOS
+            $sql = "INSERT INTO cliente (nomeCliente, dataNascimento, cpfCliente, rgCliente)
+            VALUES (?, ?, ?, ?, ?)";
 
-    // echo "<br>$verificaFirst<br>";
+            $stmt = Conn::getConn()->prepare($sql);
+            $stmt->bindValue(1, $c->getNome());
+            $stmt->bindValue(2, $c->getNascimento());
+            $stmt->bindValue(3, $c->getCpf());
+            $stmt->bindValue(4, $c->getRg());
+            
+            $stmt->execute();
+        } else {
+            // CPF JÁ CADASTRADO 
+            
+            header('Location: ../../view/pages/errorPage.php?erro=3');
+        }
 
-    // echo "<br>$verificaTwo<br>";
-    
-    // echo "<br> $verificaValues<br>";
-
-    // echo "<br>$valorFinal<br>";
-?> 
-
-<?php
 
 
+    }
+}
 
-    echo "<br> $cpf <br> $email <br> $nome <br> $celular <br> $ddd";
+Class Endereco {
+
+    private $bairro, $rua, $numero, $cidade, $estado, $pais, $bloco, $complemento;
+
+    //  Pegar os valores
 }

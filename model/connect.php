@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\model;
+namespace model;
 
 $hostname = "localhost";
 $dbname = "ecommerce";

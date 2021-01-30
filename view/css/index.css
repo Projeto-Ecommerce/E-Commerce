@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+/* CARROUSEL */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+carousel-control-next,
+.carousel-control-prev {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  z-index: 1;
+  display: inline-table;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+/* ICONS */
+.icones {
+  text-align: center;
+  margin: auto;
+}
+.imgIcons {
+  margin: 2vh auto 2vh auto;
+  max-width: 130px;
+  max-height: 110px;
+}
+/* REDES SOCIAIS e VIDEOS */
+#redesociais {
+  background-color: #eeeeee;
+}
+.title-midias h2 {
+  text-align: center;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 38px;
+  /* margin-top: 37px; */
+  margin: 37px auto 30px !important;
+  color: #464646;
+  line-height: 35px;
+}
+.title-midias h3 {
+  text-align: center;
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 700;
+  font-size: 50px;
+}
+.face {
+  text-align: center;
+  color: #eeeeee;
+}
+.bgMidias {
+  width: 100%;
+  height: 8%;
+  background-color: black;
+  display: block;
+}
+.iframeMidias {
+  margin: 1vh auto;
+  width: 100%;
+}
+
+.container-midias {
+  margin-top: 10vh;
+}
+
+#instagram-embed-0 {
+  min-width: 100% !important;
+}
+/* VIDEOS */
+.title-videos {
+  text-align: center;
+  font-family: Lobster;
+  font-weight: 400;
+  margin: 80px auto;
+}
+.apresentacaoVideos {
+  margin: auto;
+  width: 90%;
+  height: auto;
+}
+.linkVideos {
+  margin: 4vh auto;
+  max-width: 100%;
+  height: 450px;
+}
+.iframeVideos {
+  width: 100%;
+  height: 100%;
+}
+/* APRESENTAÇÃO */
+.apresentacao {
+  margin: 5vh auto;
+}
+.card {
+  margin: 1vh auto;
+}
+.card-text {
+  text-align: center;
+  text-justify: auto;
+  font-size: small;
+}
+
+.card-title {
+  font-weight: bolder;
+  text-align: center;
+}
+
+a.card-link {
+  margin: 2vh auto;
+  padding: auto;
+  max-height: 400px;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+a#linkHistory {
+  margin-top: 1vh;
+  font-size: 11px;
+  color: red;
+}
+.card-image {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+.card-img {
+  margin: auto;
+}
+#imgCardSF {
+  width: 100%;
+  height: 100%;
+}

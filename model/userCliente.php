@@ -1,6 +1,6 @@
 <?php
 
-namespace backend\model;
+namespace model;
 
 Class User{
 
@@ -29,9 +29,6 @@ Class User{
     public function setLogin(){
         return $this->password = $password;
     }
-}
-
-Class functions{
 
     public function logar(){
 
