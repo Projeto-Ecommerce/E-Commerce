@@ -2,7 +2,8 @@
 
 session_start();
 
-require_once ('../vendor/autoload.php')
+require_once ('../vendor/autoload.php');
+require_once ('functions/functionCadastros.php');
 
 //  LIMPAR CAMPOS 
 function clear($input) {
@@ -40,6 +41,7 @@ if(isset($_POST['btn-cadastrar-first'])){
     $ddd = '('.substr($celular, 0, 2).')';
     $celular = substr($celular, 2, 11);
     $celular = $ddd.$celular;
+    $dataNascimento = $_POST['nascimento'];
 
 // MUDA O LAYOUT DO CPF
     $filtraCpf[0] = substr($cpf, 0,3);
@@ -52,12 +54,19 @@ if(isset($_POST['btn-cadastrar-first'])){
 
     $cpfCorrecao = $filtraCpf[0].'.'.$filtraCpf[1].'.'.$filtraCpf[2].'-'. $filtraCpf[3];
 
-    
+    echo $cpfCorrecao.'<br>';
 //  VERIFICA SE TODOS OS CAMPOS SÃO VALIDOS
     if(!empty($cpf) && !empty($email) && !empty($nome) && !empty($celular)){
     
     //  VERIFICA SE O CPF É VALIDO
-        $verificaCpf = new controler\functions\functionsCadastros;
+        $verificaCpf = new \functionsCadastros\clienteFunctions;
+        $verificaCpf->verificaCpf($cpf);
+
+        $cliente = new \model\Cliente;
+        $cliente->setNome($nome);
+        $cliente->setCpf($cpf);
+        $cliente->setNascimento($dataNascimento);
+
     }else {
         // ERRO 2 = CAMPO DO FORMULARIO INVALIDO
         header('Location: ../view/pages/errorPage.php?erro=3');

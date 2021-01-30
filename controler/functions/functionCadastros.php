@@ -1,6 +1,7 @@
 <?php
 
-namespace controler\functions\functionsCadastros;
+namespace functionsCadastros;
+require_once ('../vendor/autoload.php');
 
 Class clienteFunctions {
      
@@ -70,20 +71,17 @@ Class clienteFunctions {
 
                 $verificaValues = substr($cpf, 9,2);
                 
-                if($verificaValues == $valorFinal){
-                    
-                    echo "CPF VALIDO!";
+                if($verificaValues != $valorFinal){
+                    echo "CPF INVALIDO!<br><br>";
+                
 
-                    $verificaBanco = new 
-                    $_SESSION['nome'] = $nome;
-                    $_SESSION['cpf'] = $cpfCorrecao;
-                    session_destroy();
-
-                    // header('Location: ../../frontend/pages/segundoCadastroCliente.php');
+                    // header('Location: ../../view/pages/errorPage.php');
                 }
             }
         }
     }
+
+    
     // INSERÇÃO NO DB
     function cadastrarCliente(Cliente $c) {
         // VERIFICA DE O CPF JÁ FOI CADASTRADO 

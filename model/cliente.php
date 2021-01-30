@@ -1,5 +1,7 @@
 <?php
 
+namespace model;
+
 Class Cliente {
      
     private $cpf, $email, $nome, $endereco, $rg, $telefone, $dataNascimento;

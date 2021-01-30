@@ -5,7 +5,7 @@ require_once 'vendor/autoload.php';
 <html lang="pt-br">
 
 <head>
-  <?php require_once 'backend/share/head.php';?>
+  <?php require_once 'view/share/head.php';?>
   <title>E-Commerce</title>
 </head>
 
@@ -15,7 +15,7 @@ require_once 'vendor/autoload.php';
   <div class="row cabecalho">
     <!-- LOGO -->
     <div class="col-md-3 col-sm-12 coluna-logo">
-      <img src="frontend/images/header_logo.png" class="header_logo" alt="header_logo">
+      <img src="view/images/header_logo.png" class="header_logo" alt="header_logo">
     </div>
 
     <!-- PESQUISA E REDES SOCIAIS -->
@@ -23,16 +23,16 @@ require_once 'vendor/autoload.php';
       <div class="row contato-row mb-md-5 me-md-5">
 
         <div class="col-md-4 contato-item">
-          <a href="#" class="contato"><img class="icones-contato" src="frontend/images/icone-whats.png" coalt="icone-waths">(19) 98675-1255</a>
+          <a href="#" class="contato"><img class="icones-contato" src="view/images/icone-whats.png" coalt="icone-waths">(19) 98675-1255</a>
 
         </div>
 
         <div class="col-md-4 contato-item">
-          <a href="#" class="contato"><img class="icones-contato" src="frontend/images/icone-tel.png" alt="icone-tel">(19) 3442-1515</a>
+          <a href="#" class="contato"><img class="icones-contato" src="view/images/icone-tel.png" alt="icone-tel">(19) 3442-1515</a>
         </div>
 
         <div class="col-md-4 col-sm-12 contato-item">
-          <a href="#" class="contato ms-5"><img class="icones-contato" src="frontend/images/icone-email.png" alt="icone-email"> churrascosbom@gmail.com</a>
+          <a href="#" class="contato ms-5"><img class="icones-contato" src="view/images/icone-email.png" alt="icone-email"> churrascosbom@gmail.com</a>
         </div>
 
       </div>
@@ -46,19 +46,19 @@ require_once 'vendor/autoload.php';
   <!-- PERFIL E CARRINHO DE COMPRAS -->
 
   <!--    NAVBAR  -->
-  <?php require_once('backend/share/navbar.php') ?>
+  <?php require_once('view/share/navbar.php') ?>
   <!--    CARROSEL    -->
   <div id="carousel" class="carousel slide" data-ride="carousel">
 
     <div class="carousel-inner">
       <div class="carousel-item active ">
-        <img class="d-block w-100" src="frontend/images/carrousel1.jpg" alt="First slide">
+        <img class="d-block w-100" src="view/images/carrousel1.jpg" alt="First slide">
       </div>
       <div class="carousel-item ">
-        <img class="d-block w-100" src="frontend/images/slider_pic2.jpg" alt="Second slide">
+        <img class="d-block w-100" src="view/images/slider_pic2.jpg" alt="Second slide">
       </div>
       <div class="carousel-item ">
-        <img class="d-block w-100" src="frontend/images/slider_pic3.jpg" alt="Second slide">
+        <img class="d-block w-100" src="view/images/slider_pic3.jpg" alt="Second slide">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -83,34 +83,34 @@ require_once 'vendor/autoload.php';
       <div class="row banners">
         <div class="col-12 col-sm-12 col-md-6">
           <a href="#" class="lnkBanners">
-            <img src="frontend/images/banner-residencial-v2.1.jpg" class="imgLinhas" alt="Banner Da Linha Residencial">
+            <img src="view/images/banner-residencial-v2.1.jpg" class="imgLinhas" alt="Banner Da Linha Residencial">
           </a>
         </div>
         <div class="col-12 col-sm-12 col-md-6">
           <a href="#" id="lnkBannerProfissional">
-            <img src="frontend/images/banner-profissional-v2.1.jpg" class="imgLinhas" alt=" Banner Da Linha Profissional">
+            <img src="view/images/banner-profissional-v2.1.jpg" class="imgLinhas" alt=" Banner Da Linha Profissional">
           </a>
         </div>
       </div>
       <div class="row icones">
         <div class="col-12 col-sm-3">
           <a href="javascript:void(0)">
-            <img src="frontend/images/ICONE_GOURMET.png" class="imgIcons" alt="Icone Gourmet">
+            <img src="view/images/ICONE_GOURMET.png" class="imgIcons" alt="Icone Gourmet">
           </a>
         </div>
         <div class="col-12 col-sm-3">
           <a href="javascript:void(0)">
-            <img src="frontend/images/ICONE_GIRATÓRIA EMBUTIR.png" class="imgIcons" alt="Icone GIRATÓRIA EMBUTIR">
+            <img src="view/images/ICONE_GIRATÓRIA EMBUTIR.png" class="imgIcons" alt="Icone GIRATÓRIA EMBUTIR">
           </a>
         </div>
         <div class="col-12 col-sm-3">
           <a href="javascript:void(0)">
-            <img src="frontend/images/ICONE_EMPREENDEDORES.png" class="imgIcons" alt="Icone ICONE_EMPREENDEDORES">
+            <img src="view/images/ICONE_EMPREENDEDORES.png" class="imgIcons" alt="Icone ICONE_EMPREENDEDORES">
           </a>
         </div>
         <div class="col-12 col-sm-3">
           <a href="javascript:void(0)">
-            <img src="frontend/images/ICONE_FOOD TRUCK.png" class="imgIcons" alt="Icone FOOD TRUCK">
+            <img src="view/images/ICONE_FOOD TRUCK.png" class="imgIcons" alt="Icone FOOD TRUCK">
           </a>
         </div>
       </div>
@@ -121,38 +121,38 @@ require_once 'vendor/autoload.php';
   <section id="produtos">
     <div class="container" style="margin-left: 0.5vh;margin-top: 5vh;">
       <div class="row">
-        <?php include_once('backend/share/produtosNavigation.php') ?>
+        <?php include_once('view/share/produtosNavigation.php') ?>
         <!--    CARDS PRODUTOS    -->
         <!-- card 1 -->
         <div class="card-produtos col-md-3">
-          <img class="card-img-top slide-card-img1 selected-img-top" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
-          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img1" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img1 selected-img-top" src="view/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
+          <img class="card-img-top slide-card-img1" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img1" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img1" src="view/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img1" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img1" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
           <div class="card-body">
             <div class="thz-content navigation-imgs" style="max-width:100%">
               <div class="row">
                 <div class="col-md-4 col-4">
-                  <img class="navImg selected-nav" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(1,1)">
+                  <img class="navImg selected-nav" src="view/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(1,1)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(2,1)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(2,1)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(3,1)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(3,1)">
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(4,1)">
+                  <img class="navImg" src="view/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(4,1)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(5,1)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(5,1)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(6,1)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(6,1)">
                 </div>
               </div>
             </div>
@@ -173,34 +173,34 @@ require_once 'vendor/autoload.php';
         </div>
         <!-- card 2 -->
         <div class="card-produtos col-md-3" >
-          <img class="card-img-top slide-card-img2 selected-img-top" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
-          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img2" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img2 selected-img-top" src="view/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
+          <img class="card-img-top slide-card-img2" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img2" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img2" src="view/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img2" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img2" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
           <div class="card-body">
             <div class="thz-content navigation-imgs" style="max-width:100%">
               <div class="row">
                 <div class="col-md-4 col-4">
-                  <img class="navImg selected-nav" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(0,2)">
+                  <img class="navImg selected-nav" src="view/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(0,2)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(1,2)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(1,2)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(2,2)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(2,2)">
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(3,2)">
+                  <img class="navImg" src="view/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(3,2)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(4,2)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(4,2)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(5,2)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(5,2)">
                 </div>
               </div>
             </div>
@@ -221,34 +221,34 @@ require_once 'vendor/autoload.php';
         </div>
         <!-- card 3 -->
         <div class="card-produtos col-md-3">
-          <img class="card-img-top slide-card-img3 selected-img-top" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
-          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
-          <img class="card-img-top slide-card-img3" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img3 selected-img-top" src="view/images/produtos/lz_00395_1.jpg" style="width: 100%; display: block;">
+          <img class="card-img-top slide-card-img3" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img3" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img3" src="view/images/produtos/lz_00395_1.jpg" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img3" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width: 100%; display: none;">
+          <img class="card-img-top slide-card-img3" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width: 100%; display: none;">
           <div class="card-body">
             <div class="thz-content navigation-imgs" style="max-width:100%">
               <div class="row">
                 <div class="col-md-4 col-4">
-                  <img class="navImg selected-nav" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(0,3)">
+                  <img class="navImg selected-nav" src="view/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(0,3)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(1,3)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(1,3)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(2,3)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(2,3)">
                 </div>
               </div>
               <div class="row mt-1">
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(3,3)">
+                  <img class="navImg" src="view/images/produtos/lz_00395_1.jpg" style="width:100%" onclick="imgAtual(3,3)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(4,3)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_45_direita.png" style="width:100%" onclick="imgAtual(4,3)">
                 </div>
                 <div class="col-md-4 col-4">
-                  <img class="navImg" src="frontend/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(5,3)">
+                  <img class="navImg" src="view/images/produtos/l.p.b.m20.2grill-site_tampa_aberta.png" style="width:100%" onclick="imgAtual(5,3)">
                 </div>
               </div>
             </div>
@@ -321,7 +321,7 @@ require_once 'vendor/autoload.php';
     <div class="row apresentacao">
       <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
         <a href="" class="card-link">
-          <img class="card-img-top" src="frontend/images/02---EMPRESA_33.png" alt="imagem da Empresa">
+          <img class="card-img-top" src="view/images/02---EMPRESA_33.png" alt="imagem da Empresa">
           <div class="card-body">
             <p class="card-title">BREVE HISTÓRIA</p>
             <p class="card-text">
@@ -333,7 +333,7 @@ require_once 'vendor/autoload.php';
       </div>
       <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
         <a href="#" class="card-link">
-          <img class="card-img-top" src="frontend/images/brasil.png" alt="imagem da bandeira Brasileira">
+          <img class="card-img-top" src="view/images/brasil.png" alt="imagem da bandeira Brasileira">
           <div class="card-body">
             <p class="card-title">PRODUZIDO NO BRASIL</p>
             <p class="card-text">
@@ -344,7 +344,7 @@ require_once 'vendor/autoload.php';
       </div>
       <div class="card col-12 col-sm-12 col-md-3" style="width: 14rem;">
         <a href="#" class="card-link">
-          <img class="card-img-top" src="frontend/images/02---EMPRESA_28.jpg" alt="imagem da Empresa">
+          <img class="card-img-top" src="view/images/02---EMPRESA_28.jpg" alt="imagem da Empresa">
           <div class="card-body">
             <p class="card-title">PRODUTO PATENTEADO</p>
             <p class="card-text">
@@ -355,7 +355,7 @@ require_once 'vendor/autoload.php';
       </div>
       <div class="card col-12 col-sm-12 col-md-3">
         <a href="" class="card-img">
-          <img id="imgCardSF" src="frontend/images/02---EMPRESA_18.png" alt="Imagem De Satisfação 100%">
+          <img id="imgCardSF" src="view/images/02---EMPRESA_18.png" alt="Imagem De Satisfação 100%">
         </a>
       </div>
     </div>
