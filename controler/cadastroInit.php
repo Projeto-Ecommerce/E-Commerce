@@ -47,9 +47,13 @@ if(isset($_POST['btn-cadastrar-first'])){
     $dataNascimento = $_POST['nascimento'];
     $celular = trataCelular($_POST['celular']);
 
-// MUDA O LAYOUT DO CPF
-
     $cpfCorrecao = $_POST['cpf'];
+
+    $_SESSION['nome'] = $_POST['nome'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['cpf'] = $_POST['cpf'];
+    $_SESSION['dataNascimento'] = $_POST['nascimento'];
+    $_SESSION['celular'] = $_POST['celular'];
 
 //  VERIFICA SE TODOS OS CAMPOS SÃO VALIDOS
     $cliente = new \model\Cliente;
@@ -60,8 +64,20 @@ if(isset($_POST['btn-cadastrar-first'])){
     $cliente->setCelular($celular);
     
     //  VERIFICA SE O CPF É VALIDO
-        $verificaCampos = new \model\ClienteDao;
-        $verificaCampos->verificaCampos($cliente);
+    $verificaCampos = new \model\ClienteDao;
+    $verificaCampos->verificaCampos($cliente);
 
+    if(isset($_SESSION['var'])){
+        $var = $_SESSION['var'];
+    }
+    
+    if(!isset($var)){
+        $cadastrarCliente = new \model\ClienteDao;
+        $cadastrarCliente->cadastroInicialCliente($cliente);
+    }else{
+        echo 'Erro no cadastro tente novamente!';
+    }
+
+    
 
 }

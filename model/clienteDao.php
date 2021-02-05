@@ -7,6 +7,14 @@ require_once ('requires.php');
 
 Class ClienteDao {
      
+    public $var;
+    function getVar() {
+        return $this->var;
+    }
+
+    function setVar($var) {
+        $this->var = $var;
+    }
     //  VERIFICA TODOS OS CAMPOS DO FORMULARIO
     function verificaCampos(Cliente $C) {
 
@@ -16,15 +24,11 @@ Class ClienteDao {
         $nascimento = $C->getNascimento();
         $celular = $C->getCelular();
 
-        $_SESSION['nome'] = $C->getNome();
-        $_SESSION['email'] = $C->getEmail();
-        $_SESSION['cpf'] = $C->getCpf();
-        $_SESSION['dataNascimento'] = $C->getNascimento();
-        $_SESSION['celular'] = $C->getCelular();
         // VERIFICA SE O CAMPO NOME É VALIDO
         if(empty($nome)){
                         
             $_SESSION['error'] = 1;
+            $_SESSION['var'] = 1;
             header('Location: ../view/pages/primeiroCadastroCliente.php');
             return false;
         }
@@ -33,6 +37,7 @@ Class ClienteDao {
 
                         
             $_SESSION['error'] = 2;
+            $_SESSION['var'] = 1;
             header('Location: ../view/pages/primeiroCadastroCliente.php');
             return false;
         }
@@ -41,6 +46,7 @@ Class ClienteDao {
 
                         
             $_SESSION['error'] = 4;
+            $_SESSION['var'] = 1;
             header('Location: ../view/pages/primeiroCadastroCliente.php');
             return false;
         }
@@ -49,6 +55,7 @@ Class ClienteDao {
 
            // VERIFICA SE O CELULAR TEM O TAMANHO CORRETO
            $_SESSION['error'] = 5;
+           $_SESSION['var'] = 1;
            header('Location: ../view/pages/primeiroCadastroCliente.php');
            return false;
 
@@ -57,6 +64,7 @@ Class ClienteDao {
 
                 // VERIFICA O NUMERO DE CARACTERES DO CELULAR
                 $_SESSION['error'] = 5;
+                $_SESSION['var'] = 1;
                 header('Location: ../view/pages/primeiroCadastroCliente.php');
                 return false;
             }
@@ -66,13 +74,14 @@ Class ClienteDao {
 
         if (strlen($cpf) != 11) {
             //  TAMANHO DO CPF INVALIDO / ERRO 1 = CPF INVALIDO
-
+            
             $_SESSION['error'] = 3;
+            $_SESSION['var'] = 1;
             header('Location: ../view/pages/primeiroCadastroCliente.php');
             return false;
 
         }else{
-    
+            if(is_string($cpf))
             $i = 0;
             $soma = 0;
             $multiplicador = 10;
@@ -128,43 +137,46 @@ Class ClienteDao {
 
                 $_SESSION['error'] = 3;
                 header('Location: ../view/pages/primeiroCadastroCliente.php');
-
+                $_SESSION['var'] = 1;
             }
         }
     }
     
-
-    
     // INSERÇÃO NO DB
-    function cadastrarCliente(Cliente $c) {
+    function cadastroInicialCliente(Cliente $c) {
+
         // VERIFICA SE O CPF JÁ FOI CADASTRADO 
-        $sql = "SELECT * FROM cliente WHERE cpfCliente = ?";
+        $sql = "SELECT * FROM cliente WHERE cpfCliente = ? or emailCliente = ?";
 
         $stmt = Conn::getConn()->prepare($sql);
         $stmt->bindValue(1, $c->getCpf());
+        $stmt->bindValue(2, $c->getEmail());
         
-        $resultado = $stmt->execute();
+        $stmt->execute();
 
-        if($resultado == NULL){
+        $resultado = $stmt->rowCount();
+
+        if($resultado == 0){
             // FAZ A INSERÇÃO NO BANCO DE DADOS
-            $sql = "INSERT INTO cliente (nomeCliente, dataNascimento, cpfCliente, rgCliente)
-            VALUES (?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO cliente (nomeCliente, cpfCliente, dataNascimento, emailCliente)
+            VALUES (?, ?, ?, ?)";
 
             $stmt = Conn::getConn()->prepare($sql);
             $stmt->bindValue(1, $c->getNome());
-            $stmt->bindValue(2, $c->getNascimento());
-            $stmt->bindValue(3, $c->getCpf());
-            $stmt->bindValue(4, $c->getRg());
+            $stmt->bindValue(2, $c->getCpf());
+            $stmt->bindValue(3, $c->getNascimento());
+            $stmt->bindValue(4, $c->getEmail());
             
             $stmt->execute();
+            
+            echo "Cadastrado com sucesso <br><br>". $stmt->rowCount();
         } else {
             // CPF JÁ CADASTRADO 
-            
-            header('Location: ../../view/pages/errorPage.php?erro=3');
+            $_SESSION['error'] = 6;
+
+            echo $_SESSION['error'];
+            header('Location: ../view/pages/primeiroCadastroCliente.php');
         }
-
-
-
     }
 }
 

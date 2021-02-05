@@ -7,7 +7,7 @@ Class contatoDao {
     function createContato (Contato $C){
 
         // VERIFICAR SE O E-MAIL É VALIDO E JÁ FOI CADASTRADO
-        $email = $C->getEmail();
+
         // VERIFICAR SE OS NUMEROS SÃO VALIDOS E JÁ FORAM CADASTRADOS
 
         // ADICIONAR O CONTATO AO DB

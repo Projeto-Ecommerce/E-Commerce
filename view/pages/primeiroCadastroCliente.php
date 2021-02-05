@@ -1,18 +1,16 @@
 <?php
   session_start();
-
       // VERIFICA SE HÁ ERROS
       if(isset($_SESSION['error'])){
 
         $erro = $_SESSION['error'];
-
         $nome = $_SESSION['nome'];
         $email = $_SESSION['email'];
         $cpf = $_SESSION['cpf'];
         $celular = $_SESSION['celular'];
         $nascimento = $_SESSION['dataNascimento'];
 
-        echo "<br> $erro <br> $nome <br> $email<br> $cpf<br>$celular<br>$nascimento";
+        // echo "<br> $erro <br> $nome <br> $email<br> $cpf<br>$celular<br>$nascimento";
         switch($erro){
           case 1:
             // ERRO DE NOME INVALIDO
@@ -74,6 +72,26 @@
             </script>
             <?php
             break;
+
+          case 6:
+            // ERRO DE NUMERO DE CELULAR INVALIDO
+            ?>
+            <script>
+            addEventListener('load', function mostrarErro(){
+              var celular = document.getElementsByTagName('input')[2];
+              celular.style.borderBottom = '2px solid red';
+            });
+            </script>
+            <?php
+            $msg = "<div class='container msg-error'>
+                      <div class='row'>
+                        <div class='col-md-12 mt-md-3 text-center'>
+                          <p>O CPF <b class='wrong-cpf'>$cpf</b> e/ou o e-mail <b class='wrong-cpf'>$email</b> já estão vinculados a uma conta em nossa base de dados!</p>
+                          <p class='msg-suporte'>Caso você ache que essa mensagem não deveria aparecer entre em contato com o nosso <a href='javascript:void()' class='link-suporte'>suporte</a>!</p>
+                        </div>
+                      </div>
+                    </div>";
+            break; 
         }// FECHAMENTO DA ESTRUTURA DE DECISÃO SWITCH
       ?>
           
@@ -100,11 +118,27 @@
 
   <script>
     addEventListener('load', function carregarMask(){
-      addEventListener('keydown', function maskDown(){
-        if(document.getElementById('celular').value.length == 0){
-          document.getElementById('celular').value += "(";
-        }
+      document.getElementById('celular').addEventListener('click', function clickCell(){
+        addEventListener('keydown', function maskDown(){
+          if(document.getElementById('celular').value.length == 0){
+            document.getElementById('celular').value += "(";
+          }
+        })
       })
+      
+      document.getElementById('cpf').addEventListener('paste', function limpaCola(){
+          setTimeout(function limpaCampo() {
+            document.getElementById('cpf').value = "";
+          }, 100);
+          
+      })
+
+      document.getElementById('celular').addEventListener('paste', function limpaCola(){
+          setTimeout(function limpaCampo() {
+            document.getElementById('celular').value = "";
+          }, 100);
+          
+        })
       addEventListener('keyup', function mask(){
 
         if(document.getElementById('cpf').value.length == 3 || document.getElementById('cpf').value.length == 7){
@@ -140,9 +174,16 @@
       <div class="container-content">
         <div class="container">
           <div class="row">
-
-            <?php if(isset($nome) || isset($email) || isset($cpf) || isset($nascimento) || isset($celular)){
+            
+            <?php 
+            if(isset($nome) || isset($email) || isset($cpf) || isset($nascimento) || isset($celular)){
+              switch($erro){
+                case 6:
+                  echo $msg;
+                  break;
+              }
               ?>
+              
               <div class="col-md-6 form-col mt-md-5">
                 <form action="../../controler/cadastroInit.php" method="post">
                   <input type="text" name="nome" value="<?= $nome ?>" placeholder="Nome Completo" class="inputText">
@@ -173,6 +214,17 @@
             <?php
             }// FECHAMENTE DO ELSE
             ?>
+            <div class="col-md-6 mt-5">
+              <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../images/banner-profissional-v2.1.jpg" class="d-block w-100" alt="Linha Profissional">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../images/banner-residencial-v2.1.jpg" class="d-block w-100" alt="Linha Residencial">
+                  </div>
+                </div>
+              </div>
 
           </div>
         </div>

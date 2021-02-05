@@ -14,7 +14,7 @@ Class Conn{
     public static function getConn() {
         
         if(!isset(self::$instance)){
-            self::$instance = new \PDO('mysql:host='.$hostname.';dbname='.$dbname, $username, $password);
+            self::$instance = new \PDO('mysql:host=localhost;dbname=ecommerce', 'root', '');
         }
 
         return self::$instance;
