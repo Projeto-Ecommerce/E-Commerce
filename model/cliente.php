@@ -4,7 +4,7 @@ namespace model;
 
 Class Cliente {
      
-    private $cpf, $email, $nome, $endereco, $rg, $telefone, $dataNascimento;
+    private $cpf, $email, $nome, $endereco, $rg, $celular, $dataNascimento;
 
     //  PEGAR CPF
     function getCpf() {
@@ -49,5 +49,13 @@ Class Cliente {
 
     function setNascimento($nascimento) {
         $this->nascimento = $nascimento;
+    }
+
+    function getCelular() {
+        return $this->celular;
+    }
+
+    function setCelular($celular) {
+        $this->celular = $celular;
     }
 }
