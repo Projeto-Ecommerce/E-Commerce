@@ -1,31 +1,17 @@
 <?php
 
+namespace model;
+
 Class contato {
 
-    private $telFixo, $telCelular, $email, $idCliente_contato, $idEndereço_contato, $idFornecedor_contato;
-    
-    function getTelfixo (){
-        return $this->telFixo;
-    }
+    private $Celular, $idCliente_contato, $idEndereço_contato, $idFornecedor_contato;
 
-    function setTelfixo ($telFixo){
-        $this->tellFixo = $telFixo;
-    }
-
-    function getTelcelular (){
+    function getCelular (){
         return $this->telCelular;
     }
 
-    function setTelcelular ($telCelular){
+    function setCelular ($telCelular){
         $this->telCelular = $telCelular;
-    }
-
-    function getEmail (){
-        return $this->email;
-    }
-
-    function setEmail ($email){
-        $this->email = $email;
     }
 
     function getIdcliente_contato (){

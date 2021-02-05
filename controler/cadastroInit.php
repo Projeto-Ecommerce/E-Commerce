@@ -63,21 +63,25 @@ if(isset($_POST['btn-cadastrar-first'])){
     $cliente->setEmail($email);
     $cliente->setCelular($celular);
     
-    //  VERIFICA SE O CPF É VALIDO
-    $verificaCampos = new \model\ClienteDao;
-    $verificaCampos->verificaCampos($cliente);
+    // //  VERIFICA SE O CPF É VALIDO
+    // $verificaCampos = new \model\ClienteDao;
+    // $verificaCampos->verificaCampos($cliente);
 
-    if(isset($_SESSION['var'])){
-        $var = $_SESSION['var'];
-    }
+    // if(isset($_SESSION['var'])){
+    //     $var = $_SESSION['var'];
+    // }
     
-    if(!isset($var)){
-        $cadastrarCliente = new \model\ClienteDao;
-        $cadastrarCliente->cadastroInicialCliente($cliente);
-    }else{
-        echo 'Erro no cadastro tente novamente!';
-    }
+    // if(!isset($var)){
+    //     $cadastrarCliente = new \model\ClienteDao;
+    //     $cadastrarCliente->cadastroInicialCliente($cliente);
+    // }else{
+    //     echo 'Erro no cadastro tente novamente!';
+    // }
 
-    
+    $contato = new \model\contato;
+    $contato->setCelular('(19) 98771-7410');
+
+    $contatoDao = new \model\contatoDao;
+    $contatoDao->createContato($contato);
 
 }
