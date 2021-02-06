@@ -55,7 +55,7 @@ if(isset($_POST['btn-cadastrar-first'])){
     $_SESSION['dataNascimento'] = $_POST['nascimento'];
     $_SESSION['celular'] = $_POST['celular'];
 
-//  VERIFICA SE TODOS OS CAMPOS SÃO VALIDOS
+//  LIMPA TODOS OS CAMPOS
     $cliente = new \model\Cliente;
     $cliente->setNome($nome);
     $cliente->setCpf($cpf);
@@ -63,14 +63,15 @@ if(isset($_POST['btn-cadastrar-first'])){
     $cliente->setEmail($email);
     $cliente->setCelular($celular);
     
-    // //  VERIFICA SE O CPF É VALIDO
-    // $verificaCampos = new \model\ClienteDao;
-    // $verificaCampos->verificaCampos($cliente);
+    //  VERIFICA SE OS CAMPUS SÃO VALIDOS
+    $verificaCampos = new \model\ClienteDao;
+    $verificaCampos->verificaCampos($cliente);
 
     // if(isset($_SESSION['var'])){
     //     $var = $_SESSION['var'];
     // }
-    
+
+        // INSERE NO BANCO DE DADOS
     // if(!isset($var)){
     //     $cadastrarCliente = new \model\ClienteDao;
     //     $cadastrarCliente->cadastroInicialCliente($cliente);
@@ -79,9 +80,10 @@ if(isset($_POST['btn-cadastrar-first'])){
     // }
 
     $contato = new \model\contato;
-    $contato->setCelular('(19) 98771-7410');
+    $contato->setCelular($celular);
 
     $contatoDao = new \model\contatoDao;
     $contatoDao->createContato($contato);
 
+    
 }
