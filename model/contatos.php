@@ -2,9 +2,10 @@
 
 namespace model;
 
+require_once ('requires.php');
 Class contato {
 
-    private $Celular, $idCliente_contato, $idEndereço_contato, $idFornecedor_contato;
+    private $idCliente, $Celular, $idCliente_contato, $idEndereço_contato, $idFornecedor_contato;
 
     function getCelular (){
         return $this->telCelular;
@@ -39,4 +40,26 @@ Class contato {
     function setIdfornecedor_contato ($idFornecedor_contato){
         $this->idFornecedor_contato = $idFornecedor_contato;
     }
-} 
+
+    function getIdCliente() {
+        return $this->idCliente;
+    }
+
+    function setIdCliente(Cliente $c) {
+        $sql = "SELECT * FROM cliente WHERE nomeCliente = ?";
+
+        $stmt = Conn::getConn()->prepare($sql);
+        $stmt->bindValue(1, $c->getNome());
+        
+        $stmt->execute();
+
+        $stmtRows = $stmt->rowCount();
+        $resultado = $stmt->fetchAll();
+
+        if($stmtRows != 0){
+            var_dump($resultado);
+            echo $resultado['idCliente'];
+            $this->idCliente = $resultado['idCliente'];
+        }
+    }
+}

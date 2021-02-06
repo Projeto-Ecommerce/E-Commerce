@@ -169,20 +169,10 @@ Class ClienteDao {
             
             $stmt->execute();
             
-            echo "Cadastrado com sucesso <br><br>". $stmt->rowCount();
         } else {
             // CPF JÁ CADASTRADO 
             $_SESSION['error'] = 6;
-
-            echo $_SESSION['error'];
             header('Location: ../view/pages/primeiroCadastroCliente.php');
         }
     }
-}
-
-Class Endereco {
-
-    private $bairro, $rua, $numero, $cidade, $estado, $pais, $bloco, $complemento;
-
-    //  Pegar os valores
 }

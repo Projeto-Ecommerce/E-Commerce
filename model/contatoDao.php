@@ -82,6 +82,7 @@ Class contatoDao {
                 case 98:
                 case 99:
                     // ADICIONAR O CONTATO AO DB
+                        $sql = "SELECT * FROM cliente WHERE ";
                         $sql = "INSERT INTO contatos (numero, tipoUsuario, )";
                     // ADICIONAR O ID NA CHAVE PRIMARIA DO CLIENTE
 

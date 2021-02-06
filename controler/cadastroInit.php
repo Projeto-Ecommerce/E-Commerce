@@ -71,7 +71,7 @@ if(isset($_POST['btn-cadastrar-first'])){
     //     $var = $_SESSION['var'];
     // }
 
-        // INSERE NO BANCO DE DADOS
+    //     // INSERE NO BANCO DE DADOS
     // if(!isset($var)){
     //     $cadastrarCliente = new \model\ClienteDao;
     //     $cadastrarCliente->cadastroInicialCliente($cliente);
@@ -85,5 +85,7 @@ if(isset($_POST['btn-cadastrar-first'])){
     $contatoDao = new \model\contatoDao;
     $contatoDao->createContato($contato);
 
-    
+    $idCliente = new \model\contato;
+    $idCliente->setIdCliente($cliente);
+    $idCliente->getIdCliente();
 }

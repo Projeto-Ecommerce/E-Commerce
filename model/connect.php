@@ -2,11 +2,6 @@
 
 namespace model;
 
-$hostname = "localhost";
-$dbname = "ecommerce";
-$username = "root";
-$password = "";
-
 Class Conn{
 
     private static $instance;
