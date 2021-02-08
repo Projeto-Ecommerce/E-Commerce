@@ -151,6 +151,7 @@ body{
     border-radius: 2px;
     font-family: Roboto, sans-serif;
     line-height: 10px;
+    box-shadow: -2px 5px 5px #b8b7b7;
 }
 
 .link-suporte{

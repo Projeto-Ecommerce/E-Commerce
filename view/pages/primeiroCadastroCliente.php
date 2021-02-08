@@ -116,48 +116,8 @@
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <script>
-    addEventListener('load', function carregarMask(){
-      document.getElementById('celular').addEventListener('click', function clickCell(){
-        addEventListener('keydown', function maskDown(){
-          if(document.getElementById('celular').value.length == 0){
-            document.getElementById('celular').value += "(";
-          }
-        })
-      })
-      
-      document.getElementById('cpf').addEventListener('paste', function limpaCola(){
-          setTimeout(function limpaCampo() {
-            document.getElementById('cpf').value = "";
-          }, 100);
-          
-      })
-
-      document.getElementById('celular').addEventListener('paste', function limpaCola(){
-          setTimeout(function limpaCampo() {
-            document.getElementById('celular').value = "";
-          }, 100);
-          
-        })
-      addEventListener('keyup', function mask(){
-
-        if(document.getElementById('cpf').value.length == 3 || document.getElementById('cpf').value.length == 7){
-          document.getElementById('cpf').value += '.';
-        }
-        if(document.getElementById('cpf').value.length == 11){
-          document.getElementById('cpf').value += '-';
-        }
-  
-        if(document.getElementById('celular').value.length == 3){
-          document.getElementById('celular').value += ") ";
-        }
-
-        if(document.getElementById('celular').value.length == 10){
-          document.getElementById('celular').value += '-';
-        }
-      })
-    })
-  </script>
+    <script src="../javascript/cadastroCliente.js">
+    </script>
     <title>Novo Usuario</title>
   </head>
   <body>
@@ -185,6 +145,7 @@
               ?>
               
               <div class="col-md-6 form-col mt-md-5">
+              <p class="text-center"><h4 class="text-center mb-md-4">CADASTRO DE NOVO CLIENTE</h4></p>
                 <form action="../../controler/cadastroInit.php" method="post">
                   <input type="text" name="nome" value="<?= $nome ?>" placeholder="Nome Completo" class="inputText">
                   <input type="email" name="email" value="<?= $email ?>" placeholder="E-mail" class="inputText mt-5">
@@ -200,6 +161,7 @@
             }else{ // FECHAMENTO DO IF
               ?>
             <div class="col-md-6 form-col mt-md-5">
+            <p class="text-center"><h4 class="text-center mb-md-4">CADASTRO DE NOVO CLIENTE</h4></p>
               <form action="../../controler/cadastroInit.php" method="post">
                 <input type="text" name="nome" placeholder="Nome Completo" class="inputText">
                 <input type="email" name="email" placeholder="E-mail" class="inputText mt-5">

@@ -57,9 +57,9 @@ Class contato {
         $resultado = $stmt->fetchAll();
 
         if($stmtRows != 0){
-            var_dump($resultado);
-            echo $resultado['idCliente'];
-            $this->idCliente = $resultado['idCliente'];
+            // var_dump($resultado);
+            // echo '<br><br>'.$resultado[0]['idCliente'].'<br><br>';
+            $this->idCliente = $resultado[0]['idCliente'];
         }
     }
 }

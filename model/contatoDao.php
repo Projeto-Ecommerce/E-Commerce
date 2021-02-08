@@ -6,10 +6,10 @@ require_once ('requires.php');
 
 Class contatoDao {
 
-    function createContato (Contato $C){
+    function createContato (Contato $c){
 
         // VERIFICAR SE OS NUMEROS SÃO VALIDOS E JÁ FORAM CADASTRADOS
-        $celular = $C->getCelular();
+        $celular = $c->getCelular();
         echo $celular;
         $ddd = substr($celular, 1, 2);
         echo '<br><br>'.$ddd;
@@ -82,11 +82,36 @@ Class contatoDao {
                 case 98:
                 case 99:
                     // ADICIONAR O CONTATO AO DB
-                        $sql = "SELECT * FROM cliente WHERE ";
-                        $sql = "INSERT INTO contatos (numero, tipoUsuario, )";
                     // ADICIONAR O ID NA CHAVE PRIMARIA DO CLIENTE
-
                     // ADICIONAR O ID NA CHAVE PRIMARIA DO FORNECEDOR
+                        $sql = "SELECT * FROM cliente WHERE numero = ?";
+
+                        $stmt = Conn::getConn()->prepare($sql);
+                        $stmt->bindValue(1, $c->getCelular());
+
+                        $resultado = $stmt->execute();
+                        if($resultado == 0){
+                            $sql = "INSERT INTO contatos (numero, tipoUsuario, idCliente_contato)
+                            VALUES (?, ?, ?)";
+                    
+                            $stmt = Conn::getConn()->prepare($sql);
+                            $stmt->bindValue(1, $c->getCelular());
+                            $stmt->bindValue(2, '1');
+                            $stmt->bindValue(3, $c->getIdCliente());
+
+                            echo $c->getIdCliente();
+
+                            $resultado = $stmt->execute();
+
+                            if($resultado != 0){
+                                echo '<br><br>Cadastrado com sucesso';
+                                // MANDA O USUARIO PARA A PROXIMA PAGINA
+                            } else {
+                                //MANDA-O DE VOLTA PARA A PAGINA DE CADASTRO COM UM ERRO NO CAMPO TELEFONE COMO O CPF
+                                echo '<br><br>ERRO DE CADASTRO!';
+                            }
+                        }
+
                     break;
                 default:
                     $_SESSION['error'] = 5;
