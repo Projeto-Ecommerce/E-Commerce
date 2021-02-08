@@ -20,8 +20,6 @@
   </head>
   <body>
 
-    <!--   CADASTRO     -->
-
     <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand ms-5" href="../../index.php"><img src="../images/header_logo.png" class="logo" alt="Banner Logo"></a>
@@ -32,13 +30,37 @@
       <div class="container-content">
         <div class="container">
           <div class="row">
-            <!-- CAMPO DE RG
-              - CAMPOS DE ENDEREÇO
-              - CAMPO DE SEXO
-              - CAMPO DE E-MAIL E SENHA
-              - CAMPO PARA RECEBER FOTOS DOS DOCUMENTOS
-              - CAMPO PARA RECEBER FOTO DO CADATRANTE
-             -->
+            <div class="col-md-12">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
           </div>
         </div>
       </div>
