@@ -24,6 +24,11 @@ Class ClienteDao {
         $nascimento = $C->getNascimento();
         $celular = $C->getCelular();
 
+        $dataNascimento = explode("-", $C->getNascimento());
+        $dia = $dataNascimento[2];
+        $mes = $dataNascimento[1];
+        $ano = $dataNascimento[0];
+        // echo '<br>'.$dia.'<br>'.$mes.'<br>'.$ano;
         // VERIFICA SE O CAMPO NOME É VALIDO
         if(empty($nome)){
                         
@@ -42,9 +47,14 @@ Class ClienteDao {
             return false;
         }
 
-        if(empty($nascimento)){
+        if($dia >= '31' || $mes >= '12' || $ano >= '2006'){
+            $_SESSION['error'] = 4;
+            $_SESSION['var'] = 1;
+            header('Location: ../view/pages/primeiroCadastroCliente.php');
+            return false;
+        }
 
-                        
+        if(empty($nascimento)){                 
             $_SESSION['error'] = 4;
             $_SESSION['var'] = 1;
             header('Location: ../view/pages/primeiroCadastroCliente.php');

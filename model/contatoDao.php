@@ -10,9 +10,7 @@ Class contatoDao {
 
         // VERIFICAR SE OS NUMEROS SÃO VALIDOS E JÁ FORAM CADASTRADOS
         $celular = $c->getCelular();
-        echo $celular;
         $ddd = substr($celular, 1, 2);
-        echo '<br><br>'.$ddd;
             switch($ddd){
                 case 11:
                 case 12:
@@ -98,8 +96,6 @@ Class contatoDao {
                             $stmt->bindValue(1, $c->getCelular());
                             $stmt->bindValue(2, '1');
                             $stmt->bindValue(3, $c->getIdCliente());
-
-                            echo $c->getIdCliente();
 
                             $resultado = $stmt->execute();
 

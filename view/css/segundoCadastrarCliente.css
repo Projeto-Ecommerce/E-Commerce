@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-block{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/fundo-2010x2010.jpg");
+}
+
+.container-content{
+    width: 80%;
+    height: 80%;
+    border-radius: 3px;
+    background-image: url('../images/tabua-de-carne-png-2.png');
+    background-repeat: no-repeat;
+    background-size: 95%;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;
+    font-family: Roboto, sans-serif;
+    font-size: 80%;
+}
+
+.inputText{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    width: 90%;
+    padding: 5px;
+}
+
+.inputText:hover{
+    animation-name: inputFocus;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+.smallInput{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    width: 45%;
+    padding: 5px;
+}
+
+.smallInput:hover{
+    animation-name: inputFocus;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+.dataNascimento{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    width: 40%;
+    padding: 5px;
+    margin-left: 5%;
+}
+
+.botao-cadastrar{
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: rgb(212, 212, 212);
+    border-radius: 2px;
+    z-index: 2;
+    position: relative;
+}
+
+.botao-cadastrar:hover{
+    animation-name: btnAnimation;
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+}
+
+.btnText{
+    opacity: 0;
+    position: absolute;
+    float: left;
+}
+
+.botao-cadastrar:hover .btnText{
+    animation-name: btnTextAnimation;
+    animation-duration: 500ms;
+    animation-fill-mode: both; 
+    animation-delay: 800ms;
+    position: relative;
+}
+
+.botao-cadastrar:hover .wrongIcon{
+    display: none;
+}
+
+.navbar{
+    background-color: rgb(238, 237, 237);
+}
+
+
+@keyframes inputFocus{
+    from {
+        border-bottom: 1px solid black;
+    }
+
+    to{
+        border-bottom: 1px solid rgb(255, 94, 0);
+    }
+}
+
+@keyframes btnTextAnimation{
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+@keyframes btnAnimation{
+    from {
+        width: 100px;
+        background-color: rgb(212, 212, 212);
+    }
+
+    to {
+        width: 90%;
+        background-color: rgb(0, 89, 255);
+    }
+
+}
+
+.logo{
+    width: 50px;
+    height: auto;
+}
+
+.msg-error{
+    background-color: rgb(214, 214, 214);
+    border-radius: 2px;
+    font-family: Roboto, sans-serif;
+    line-height: 10px;
+    box-shadow: -2px 5px 5px #b8b7b7;
+}
+
+.link-suporte{
+    color: rgb(36, 36, 252);
+}
+
+.wrong-cpf{
+    color: rgb(218, 5, 5);
+}
+
+.msg-suporte{
+    font-size: 80%;
+    color: rgb(90, 90, 90);
+}
+
+@media screen and (max-width: 770px){
+    .container-block{
+        height: 150vh;
+    }
+}
+@media screen and (max-width: 500px){
+    .dataNascimento{
+        width: 100%;
+        margin: 0;
+    }
+
+    .smallInput{
+        width: 100%;
+    }
+
+    .inputText{
+        width: 100%;
+    }
+
+    @keyframes btnAnimation{
+        from {
+            width: 100px;
+            background-color: rgb(212, 212, 212);
+        }
+    
+        to {
+            width: 100%;
+            background-color: rgb(0, 89, 255);
+        }
+    
+    }
+}
