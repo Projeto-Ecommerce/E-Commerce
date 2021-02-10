@@ -26,15 +26,38 @@
     <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand ms-5" href="../../index.php"><img src="../images/header_logo.png" class="logo" alt="Banner Logo"></a>
-
   </div>
 </nav>
     <div class="container-block">
       <div class="container-content">
         <div class="container">
-          <div class="row">
+          <div class="row forms">
             
+            <!-- SEGUNDA PARTE DO CADASTRO DE CLIENTE -->
+            <div class="ms-3 col-md-5">
+              <input type="hidden" id="idCliente" value="IdCliente">
+              <input type="hidden" id="nome" value="nomeCliente">
+              <div class="row mt-md-5">
+              <!-- RG -->
+                <input type="text" class="inputText" id="rg" placeholder="RG">
+              <!-- ORGÃO EMISSOR -->
 
+              <!-- ESTADO DE EMISSÃO -->
+
+              <!-- DATA DE EMISSÃO -->
+              </div>
+              <div class="row-radios mt-md-5">
+                <div class="col-md-12 col-radios">
+                  <label for="masculino">M
+                    <input type="radio" name="sexo" value="F" id="masculino" class="inputRadio">
+                  </label>
+                  <label for="feminino" class="ms-2">F
+                    <input type="radio" name="sexo" value="M" id="feminino" class="inputRadio">
+                  </label>
+                </div>
+              </div>
+              <div class="row"></div>              
+            </div>
 
           </div>
         </div>

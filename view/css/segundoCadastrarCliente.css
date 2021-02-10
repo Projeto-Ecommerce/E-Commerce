@@ -14,16 +14,20 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: url("../images/fundo-2010x2010.jpg");
+    background-image: url('../images/fresh-vegetable-and-grilled-snail-sausage-arranged-in-circular-frame.jpg');
+    background-size: cover;
+    background-position-y: -100px;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .container-content{
-    width: 80%;
-    height: 80%;
-    border-radius: 3px;
-    background-image: url('../images/tabua-de-carne-png-2.png');
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-image: url("../images/fundo-2010x2010.jpg");
     background-repeat: no-repeat;
-    background-size: 95%;
+    background-size: 100%;
     background-position-x: center;
     background-position-y: center;
 }
@@ -64,86 +68,19 @@ body{
     animation-fill-mode: both;
 }
 
-.dataNascimento{
-    border: none;
-    border-bottom: 1px solid black;
-    background-color: transparent;
-    outline: none;
-    width: 40%;
-    padding: 5px;
-    margin-left: 5%;
+.row-radios{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.botao-cadastrar{
-    width: 100px;
-    height: 50px;
-    border: none;
-    outline: none;
-    background-color: rgb(212, 212, 212);
-    border-radius: 2px;
-    z-index: 2;
-    position: relative;
-}
-
-.botao-cadastrar:hover{
-    animation-name: btnAnimation;
-    animation-duration: 1000ms;
-    animation-fill-mode: both;
-}
-
-.btnText{
-    opacity: 0;
-    position: absolute;
-    float: left;
-}
-
-.botao-cadastrar:hover .btnText{
-    animation-name: btnTextAnimation;
-    animation-duration: 500ms;
-    animation-fill-mode: both; 
-    animation-delay: 800ms;
-    position: relative;
-}
-
-.botao-cadastrar:hover .wrongIcon{
-    display: none;
+.col-radios{
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar{
     background-color: rgb(238, 237, 237);
-}
-
-
-@keyframes inputFocus{
-    from {
-        border-bottom: 1px solid black;
-    }
-
-    to{
-        border-bottom: 1px solid rgb(255, 94, 0);
-    }
-}
-
-@keyframes btnTextAnimation{
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-@keyframes btnAnimation{
-    from {
-        width: 100px;
-        background-color: rgb(212, 212, 212);
-    }
-
-    to {
-        width: 90%;
-        background-color: rgb(0, 89, 255);
-    }
-
 }
 
 .logo{
@@ -151,33 +88,17 @@ body{
     height: auto;
 }
 
-.msg-error{
-    background-color: rgb(214, 214, 214);
-    border-radius: 2px;
-    font-family: Roboto, sans-serif;
-    line-height: 10px;
-    box-shadow: -2px 5px 5px #b8b7b7;
+.forms{
+    width: 100%;
 }
 
-.link-suporte{
-    color: rgb(36, 36, 252);
-}
-
-.wrong-cpf{
-    color: rgb(218, 5, 5);
-}
-
-.msg-suporte{
-    font-size: 80%;
-    color: rgb(90, 90, 90);
-}
-
-@media screen and (max-width: 770px){
-    .container-block{
-        height: 150vh;
+@media screen and (max-width: 1400px){
+    .container-content{
+        height: 80%;
     }
 }
-@media screen and (max-width: 500px){
+
+@media screen and (max-width: 700px){
     .dataNascimento{
         width: 100%;
         margin: 0;
@@ -198,7 +119,7 @@ body{
         }
     
         to {
-            width: 100%;
+            width: 90%;
             background-color: rgb(0, 89, 255);
         }
     

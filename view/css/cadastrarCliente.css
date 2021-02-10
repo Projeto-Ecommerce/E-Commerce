@@ -14,9 +14,9 @@ body{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-image: url('../images/steak-fried-potatoes-with-barbecue-sauce-green-salad.jpg');
+    background-image: url('../images/fresh-vegetable-and-grilled-snail-sausage-arranged-in-circular-frame.jpg');
     background-size: cover;
-    background-position-y: -215px;
+    background-position-y: -100px;
     background-repeat: no-repeat;
     position: relative;
 }
@@ -137,7 +137,7 @@ body{
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    font-size: 28px;
+    font-size: 40px;
 }
 
 .btn-iniciar{
@@ -157,6 +157,7 @@ body{
     cursor: pointer;
     color: rgb(0, 0, 0);
     height: 55px;
+    font-size: 30px;
 }
 
 @keyframes inputFocus{
