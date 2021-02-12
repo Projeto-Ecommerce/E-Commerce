@@ -127,7 +127,6 @@ body{
 }
 
 .row-boas-vindas{
-    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;

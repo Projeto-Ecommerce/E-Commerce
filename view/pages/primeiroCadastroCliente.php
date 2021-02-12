@@ -3,6 +3,14 @@
       // VERIFICA SE HÁ ERROS
       if(isset($_SESSION['error'])){
 
+        ?>
+        <script>
+          window.onload = function carregar(){ 
+            document.getElementsByClassName('container-content')[0].classList.remove('locked')
+            document.getElementsByClassName('text-boas')[0].classList.add('locked')
+          }
+        </script>
+        <?php
         $erro = $_SESSION['error'];
         $nome = $_SESSION['nome'];
         $email = $_SESSION['email'];
@@ -19,6 +27,7 @@
             addEventListener('load', function mostrarErro(){
               var nome = document.getElementsByTagName('input')[0];
               nome.style.borderBottom = '2px solid red';
+              nome.style.background = 'rgb(255, 219, 219)'
             });
               
             </script>
@@ -32,6 +41,7 @@
             addEventListener('load', function mostrarErro(){
               var email = document.getElementsByTagName('input')[1];
               email.style.borderBottom = '2px solid red';
+              email.style.background = 'rgb(255, 219, 219)'
             });
             </script>
             <?php
@@ -44,6 +54,7 @@
             addEventListener('load', function mostrarErro(){
               var cpf = document.getElementsByTagName('input')[2];
               cpf.style.borderBottom = '2px solid red';
+              cpf.style.background = 'rgb(255, 219, 219)'
             });
             </script>
             <?php
@@ -56,6 +67,7 @@
             addEventListener('load', function mostrarErro(){
               var nascimento = document.getElementsByTagName('input')[3];
               nascimento.style.borderBottom = '2px solid red';
+              nascimento.style.background = 'rgb(255, 219, 219)'
             });
             </script>
             <?php
@@ -68,6 +80,7 @@
             addEventListener('load', function mostrarErro(){
               var celular = document.getElementsByTagName('input')[4];
               celular.style.borderBottom = '2px solid red';
+              celular.style.background = 'rgb(255, 219, 219)'
             });
             </script>
             <?php
@@ -78,8 +91,9 @@
             ?>
             <script>
             addEventListener('load', function mostrarErro(){
-              var celular = document.getElementsByTagName('input')[2];
-              celular.style.borderBottom = '2px solid red';
+              var cpf = document.getElementsByTagName('input')[2];
+              cpf.style.borderBottom = '2px solid red';
+              cpf.style.background = 'rgb(255, 219, 219)'
             });
             </script>
             <?php
@@ -154,7 +168,7 @@
                   <input type="text" id="nascimento" id="dataNascimento" maxlength="10" name="nascimento" value="<?= $nascimento ?>" class="dataNascimento date mt-5">
                   <input type="text" id="celular" name="celular" value="<?= $celular ?>" placeholder="Celular ddd + numero" maxlength="15" class="mt-5 smallInput celular">
                   <div class="row mt-5">
-                    <button type="submit" name="btn-cadastrar-first" class="botao-cadastrar"><span class="btnText">PRÓXIMO <i class="fas fa-angle-right"></i></span><i class="wrongIcon fas fa-angle-right"></i></button>
+                    <button type="submit" name="btn-cadastrar-first" class="botao-cadastrar ms-md-3 col-md-12"><span class="btnText">PRÓXIMO <i class="fas fa-angle-right"></i></span><i class="wrongIcon fas fa-angle-right"></i></button>
                   </div>
                 </form>
               </div>
@@ -167,7 +181,7 @@
                 <input type="text" name="nome" placeholder="Nome Completo" class="inputText ms-md-3">
                 <input type="email" name="email" placeholder="E-mail" class="inputText ms-md-3 mt-5">
                 <input type="text" name="cpf" placeholder="CPF" id="cpf" class="smallInput inputText ms-md-3 mt-5" maxlength="14">
-                <input type="text" name="nascimento" id="dataNascimento" class="inputText dataNascimento ms-md-3 mt-5">
+                <input type="text" name="nascimento" id="dataNascimento" placeholder="Data de Nascimento" class="inputText dataNascimento ms-md-3 mt-5">
                 <input type="text" id="celular" name="celular" placeholder="Celular ddd + numero" maxlength="15" class="mt-5 smallInput ms-md-3">
                 <div class="row mt-5 row-button">
                   <button type="submit" name="btn-cadastrar-first" class="botao-cadastrar ms-md-3 col-md-12"><span class="btnText">PRÓXIMO <i class="fas fa-angle-right"></i></span><i class="wrongIcon fas fa-angle-right"></i></button>
@@ -195,7 +209,7 @@
     </div>
     <div class="row row-boas-vindas">
         <div class="col-md-6 boas-vindas">
-          <p class="text-justify">Para ser um cliente PoliGrill e se tornar um mestre no churrasco, faça já o seu cadastro ou entre em uma conta já existente</p>
+          <p class="text-justify text-boas">Para ser um cliente PoliGrill e se tornar um mestre no churrasco, faça já o seu cadastro ou entre em uma conta já existente</p>
           <button class="btn-iniciar">Cadastrar-se</button>
           <button class="btn-logar mt-md-3">Login</button>
         </div>

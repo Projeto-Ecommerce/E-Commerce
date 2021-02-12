@@ -41,5 +41,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   document.getElementsByClassName('btn-iniciar')[0].addEventListener('click', function btnIniciar(){
-    document.getElementsByClassName('container-content')[0].classList.remove('locked')})
+    document.getElementsByClassName('container-content')[0].classList.remove('locked')
+    document.getElementsByClassName('text-boas')[0].classList.add('locked')
+  })
+    
 })

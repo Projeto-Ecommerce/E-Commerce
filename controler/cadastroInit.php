@@ -90,11 +90,7 @@ if(isset($_POST['btn-cadastrar-first'])){
     // SETAR OS VALORES DO CONTATO
     $contato = new \model\contato;
     $contato->setCelular($celular);
-
-    // SETAR O ID DO USUARIO DE CONTATO
-    $contato = new \model\contato;
     $contato->setIdCliente($cliente);
-    $contato->setCelular($celular);
 
     // GERAR NOVO CONTATO
     if(!isset($var)){
