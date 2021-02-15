@@ -1,51 +1,109 @@
-window.onload = function carregar(){
+$(document).ready(function(){
 
-    function focar(i){ 
-        document.getElementsByClassName('inputText')[i].style.background = 'rgb(236, 245, 255)'
+    function focar(id){ 
+        document.getElementById(id).style.background = 'rgb(236, 245, 255)'
     }
 
-    function desfocar(i){ 
-      document.getElementsByClassName('inputText')[i].style.background = 'rgb(241, 241, 241'
-  }
+    function desfocar(id){ 
+      document.getElementById(id).style.background = 'rgb(241, 241, 241)'
+    }
+    
+    function focarError(id){
+      document.getElementById(id).style.background = 'rgb(255, 190, 190)'
+    }
 
+    // FOCAR RG
     document.getElementById('rg').addEventListener('click', function (){
         document.getElementById('rg').addEventListener('keyup', function (){
             if(document.getElementById('rg').value.length != 0){
-                focar(0);
+                focar('rg');
             } else {
-                desfocar(0)
+                desfocar('rg');
             }
         })
     })
 
+    // FOCAR ORGÃO EMISSOR
     document.getElementById('orgemissor').addEventListener('click', function (){
         if(document.getElementById('orgemissor').value != '---'){
-            focar(1)
+            focar('orgemissor');
         } else {
-            desfocar(1)
+            desfocar('orgemissor');
         }
     })
 
+    // FOCAR DATA DE IMPRESSÃO
     document.getElementById('data').addEventListener('click', function (){
       document.getElementById('data').addEventListener('keyup', function (){
           if(document.getElementById('data').value.length != 0){
-              focar(2);
+              focar('data');
           } else {
-              desfocar(2)
+              desfocar('data');
           }
       })
-  })
+    })
 
+    // FOCAR ESTADO EMISSOR
     document.getElementById('estEmissor').addEventListener('click', function (){
       if(document.getElementById('estEmissor').value != '---'){
-          focar(3)
+          focar('estEmissor');
       } else {
-          desfocar(3)
+          desfocar('estEmissor');
       }
     })
-}
 
-$(document).ready(function(){
+    // DESFOCAR CIDADE
+    document.getElementById('cidade').addEventListener('click', function (){
+      document.getElementById('cidade').addEventListener('keyup', function (){
+        if(document.getElementById('cidade').value.length != 0){
+            focar('cidade');
+        } else {
+            desfocar('cidade');
+        }
+      })
+    })
+
+    // DESFOCAR ESTADO
+    document.getElementById('uf').addEventListener('click', function (){
+      document.getElementById('uf').addEventListener('keyup', function (){
+          if(document.getElementById('uf').value.length != 0){
+              focar('uf');
+          } else {
+              desfocar('uf');
+          }
+      })
+    })
+
+    document.getElementById('bairro').addEventListener('click', function (){
+      document.getElementById('bairro').addEventListener('keyup', function (){
+          if(document.getElementById('bairro').value.length != 0){
+              focar('bairro');
+          } else {
+              desfocar('bairro');
+          }
+      })
+    })
+
+    document.getElementById('numero').addEventListener('click', function (){
+      document.getElementById('numero').addEventListener('keyup', function (){
+          if(document.getElementById('numero').value.length != 0){
+              focar('numero');
+          } else {
+              desfocar('numero');
+          }
+      })
+    })
+
+    document.getElementById('endereco').addEventListener('click', function (){
+      document.getElementById('endereco').addEventListener('keyup', function (){
+          if(document.getElementById('endereco').value.length != 0){
+              focar('endereco');
+          } else {
+              desfocar('endereco');
+          }
+      })
+    })
+
     $("#cpf").mask("000.000.000-00")
     $("#cnpj").mask("00.000.000/0000-00")
     $("#telefone").mask("(00) 0000-0000")
@@ -83,5 +141,55 @@ $(document).ready(function(){
       }else{
         $("#celular").mask("(00) 0000-00009")
       }
+    })
+
+    $("#cep").focusout(function(){
+
+      var cep = $("#cep").val();
+      cep = cep.replace("-", "");
+      cep = cep.replace(".", "");
+      var url = "https://viacep.com.br/ws/" + cep + "/json/";
+
+      $.ajax(
+        {
+          url : url,
+          type : "get",
+          dataType : "json",
+          success : function(data){
+            if(data.localidade == undefined){
+              focarError('cep')
+              $('#cidade').val('');
+              desfocar('cidade');
+              $('#uf').val('');
+              desfocar('uf');
+              $('#endereco').val('');
+              desfocar('endereco');
+              $('#bairro').val('');
+              desfocar('bairro');
+            } else {
+              focar('cep');
+              $('#cidade').val(data.localidade);
+              focar('cidade');
+              $('#uf').val(data.uf);
+              focar('uf');
+              $('#endereco').val(data.logradouro);
+              focar('endereco');
+              $('#bairro').val(data.bairro);
+              focar('bairro');
+            }
+          },
+          error : function(erro){
+            focarError('cep');
+            $('#cidade').val('');
+            desfocar('cidade');
+            $('#uf').val('');
+            desfocar('uf');
+            $('#endereco').val('');
+            desfocar('endereco');
+            $('#bairro').val('');
+            desfocar('bairro');
+          },
+        }
+      )
     })
   })

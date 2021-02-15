@@ -1,11 +1,12 @@
 $(document).ready(function(){
+
+  // FORMATAÇÃO DE CAMPOS
   $("#cpf").mask("000.000.000-00")
   $("#cnpj").mask("00.000.000/0000-00")
   $("#telefone").mask("(00) 0000-0000")
   $("#salario").mask("999.999.990,00", {reverse: true})
   $("#cep").mask("00.000-000")
   $("#dataNascimento").mask("00/00/0000")
-  
   $("#rg").mask("999.999.999-W", {
     translation: {
       'W': {
@@ -37,12 +38,9 @@ $(document).ready(function(){
       $("#celular").mask("(00) 0000-00009")
     }
   })
-})
 
-$(document).ready(function(){
-  document.getElementsByClassName('btn-iniciar')[0].addEventListener('click', function btnIniciar(){
-    document.getElementsByClassName('container-content')[0].classList.remove('locked')
-    document.getElementsByClassName('text-boas')[0].classList.add('locked')
+  document.getElementById('nome').addEventListener('keyup', function() {
+    nome = document.getElementById('nome').value.split(" ");
+    console.log(typeof nome)
   })
-    
 })

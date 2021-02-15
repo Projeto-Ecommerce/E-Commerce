@@ -82,13 +82,19 @@ Class contatoDao {
                     // ADICIONAR O CONTATO AO DB
                     // ADICIONAR O ID NA CHAVE PRIMARIA DO CLIENTE
                     // ADICIONAR O ID NA CHAVE PRIMARIA DO FORNECEDOR
-                        $sql = "SELECT * FROM cliente WHERE numero = ?";
+                        $sql = "SELECT * FROM contatos WHERE numero = ?";
 
                         $stmt = Conn::getConn()->prepare($sql);
                         $stmt->bindValue(1, $c->getCelular());
 
-                        $resultado = $stmt->execute();
-                        if($resultado == 0){
+                        $stmt->execute();
+
+                        // $resultado = $stmt->fetchAll();
+
+                        $stmtRows = $stmt->rowCount();
+
+                        // echo $stmtRows;
+                        if($stmtRows == 0){
                             $sql = "INSERT INTO contatos (numero, tipoUsuario, idCliente_contato)
                             VALUES (?, ?, ?)";
                     
@@ -99,13 +105,14 @@ Class contatoDao {
 
                             $resultado = $stmt->execute();
 
-                            if($resultado != 0){
-                                echo '<br><br>Cadastrado com sucesso';
-                                // MANDA O USUARIO PARA A PROXIMA PAGINA
-                            } else {
-                                //MANDA-O DE VOLTA PARA A PAGINA DE CADASTRO COM UM ERRO NO CAMPO TELEFONE COMO O CPF
-                                echo '<br><br>ERRO DE CADASTRO!';
+                            $stmtRows = $stmt->rowCount();
+
+                            if($stmtRows == 0){
+                                // REDIRECIONA COM ERRO PARA A PAGINA INICIAL
+                                return $stmtRows;
                             }
+                        } else {
+                            
                         }
 
                     break;

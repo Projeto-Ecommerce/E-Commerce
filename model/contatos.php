@@ -40,26 +40,4 @@ Class contato {
     function setIdfornecedor_contato ($idFornecedor_contato){
         $this->idFornecedor_contato = $idFornecedor_contato;
     }
-
-    function getIdCliente() {
-        return $this->idCliente;
-    }
-
-    function setIdCliente(Cliente $c) {
-        $sql = "SELECT * FROM cliente WHERE nomeCliente = ?";
-
-        $stmt = Conn::getConn()->prepare($sql);
-        $stmt->bindValue(1, $c->getNome());
-        
-        $stmt->execute();
-
-        $stmtRows = $stmt->rowCount();
-        $resultado = $stmt->fetchAll();
-
-        if($stmtRows != 0){
-            // var_dump($resultado);
-            // echo '<br><br>'.$resultado[0]['idCliente'].'<br><br>';
-            $this->idCliente = $resultado[0]['idCliente'];
-        }
-    }
 }

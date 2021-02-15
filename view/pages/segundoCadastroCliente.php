@@ -1,3 +1,8 @@
+<?php
+
+  
+
+?>
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -107,6 +112,39 @@
 
                     <div class="col-md-12">
                       <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                          <label for="cep">CEP:</label>
+                          <input type="text" name="cep" class="inputText" id="cep">
+                        </div> 
+                        <div class="col-md-6 col-sm-12">
+                          <label for="endereco">Endereço:</label>
+                          <input type="text" id="endereco" name="endereco" class="inputText">    
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                          <label for="cidade">Cidade:</label>
+                          <input type="text" name="cidade" id="cidade" class="inputText">
+                        </div>
+                        <div class="col-md-2 me-md-3 col-sm-6 col-xs-6">
+                          <label for="uf">UF:</label>
+                          <input type="text" id="uf" maxlength="2" name="uf" class="inputText">
+                        </div>
+                        <div class="col-md-3 ms-md-3 col-sm-6 col-xs-6">
+                          <label for="numero">N°:</label>
+                          <input type="text" id="numero" maxlength="4" name="numero" class="inputText">
+                        </div>
+                        
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="col-md-6">  
+                            <label for="bairro">Bairro:</label>
+                          </div>
+                          <div class="col-md-12">
+                            <input type="text" id="bairro" name="bairro" class="inputText"> 
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -115,7 +153,8 @@
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    Accordion Item #3
+                    
+                  
                   </button>
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
