@@ -46,10 +46,11 @@ body{
 .inputText{
     border: none;
     border-bottom: 1px solid black;
-    background-color: red;
+    background-color: transparent;
     outline: none;
     width: 90%;
     padding: 5px;
+    border-radius: 1px;
 }
 
 .inputText:hover{
@@ -94,29 +95,6 @@ body{
     position: relative;
 }
 
-.botao-cadastrar:hover{
-    animation-name: btnAnimation;
-    animation-duration: 1000ms;
-    animation-fill-mode: both;
-}
-
-.btnText{
-    opacity: 0;
-    position: absolute;
-    float: left;
-}
-
-.botao-cadastrar:hover .btnText{
-    animation-name: btnTextAnimation;
-    animation-duration: 500ms;
-    animation-fill-mode: both; 
-    animation-delay: 800ms;
-    position: relative;
-}
-
-.botao-cadastrar:hover .wrongIcon{
-    display: none;
-}
 
 .navbar{
     background-color: rgb(238, 237, 237);

@@ -42,9 +42,8 @@
                 <input type="text" name="cpf" placeholder="CPF" id="cpf" class="smallInput inputText ms-md-3 mt-5" maxlength="14">
                 <input type="text" name="nascimento" id="dataNascimento" placeholder="Data de Nascimento" class="inputText dataNascimento ms-md-3 mt-5">
                 <input type="text" id="celular" name="celular" placeholder="Celular ddd + numero" maxlength="15" class="mt-5 smallInput ms-md-3">
-                <div class="row mt-5 row-button">
-                  <button type="submit" name="btn-cadastrar-first" class="botao-cadastrar ms-md-3 col-md-12 disabled"><span class="btnText">PRÓXIMO <i class="fas fa-angle-right"></i></span><i class="wrongIcon fas fa-angle-right"></i></button>
-                </div>
+                <button type="submit" name="btn-cadastrar-first" class="botao-cadastrar ms-md-3 col-md-12 disabled"><span class="btnText">PRÓXIMO <i class="fas fa-angle-right"></i></span></button>
+                
               </form>
             </div>
 
