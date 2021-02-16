@@ -46,7 +46,7 @@ body{
 .inputText{
     border: none;
     border-bottom: 1px solid black;
-    background-color: transparent;
+    background-color: red;
     outline: none;
     width: 90%;
     padding: 5px;
