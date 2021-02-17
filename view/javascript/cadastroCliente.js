@@ -45,16 +45,17 @@ $(document).ready(function(){
     if(x[1] != undefined){
       return true;
     }
-
-    if(x[0] < 3){
-      return;
-    }
   }
   
   // >>> VALIDAÇÃO DO CAMPO DE CPF <<<
   function validaCpf(x) {
     cpf['length'] = x.value.length;
     cpf['value'] = x.value;
+
+    if(cpf['value'] == ""){
+      return false;
+    }
+
     if(cpf['length'] != 14){
       return false;
     }
@@ -103,42 +104,269 @@ $(document).ready(function(){
   // >>> VALIDAÇÃO DE EMAIL <<<
 
   function validaEmail (x){
-    email['value'] = x.value;
-    email['length'] = x.value.length; 
 
-    if(email['length'] == undefined){
+    var xSplit = x.value.split(" ");
+    var xEmail = x.value.split("@");
+    if(x.value.toLowerCase() != x.value || x.value == "" || xSplit[1] != undefined){
       return false;
     }
-    
-    email = email['value'].split(" ")
-    if(email[1] != undefined){
-      return false;
-    }
-    
+    return true;
   }
+
+  // >>> VALIDAÇÃO DE DATA DE NASCIMENTO <<<
   
+  function validaNascimento (x){
+
+    var dataNascimento = x.value.split("/");
+    var dataAtual = new Date;
+
+    var dia = dataNascimento[0];
+    var mes = dataNascimento[1];
+    var ano = dataNascimento[2];
+
+    if(ano.length != 4){
+      return false;
+    }
+
+    if((dataAtual.getFullYear() - ano) >= 16){
+      
+      switch(mes){
+        case '01':
+
+          if(dia <= '31'){
+            return true;
+          }
+          break;
+  
+        case '02':
+        
+          if(dia <= '29'){
+            return true;
+          }
+          break;
+  
+        case '03':
+        
+          if(dia <= '31'){
+            return true;
+          }
+          break;
+  
+        case '04':
+  
+          if(dia <= '30'){
+            return true;
+          }
+          break;
+  
+        case '05':
+        
+          if(dia <= '31'){
+            return true;
+          }
+          break;
+  
+        case '06':
+        
+          if(dia <= '30'){
+            return true;
+          }
+          break;
+  
+        case '07':
+        
+          if(dia <= '31'){
+            return true;
+          }
+          break;
+  
+        case '08':
+        
+          if(dia <= '31'){
+            return true;
+          }
+          break;
+  
+        case '09':
+        
+          if(dia <= '30'){
+            return true;
+          }
+          break;
+  
+        case '10':
+        
+          if(dia <= '31'){
+            return true;
+          }
+          break;
+  
+        case '11':
+        
+          if(dia <= '30'){
+            return true;
+          }
+          break;
+  
+        case '12':
+        
+          if(dia <= '31'){
+            return true;
+          }
+          break;
+      }// ESTRUTURA DO SWITCH
+    }// ESTRUTURA DO IF
+  }
+
+  // >>> VALIDAÇÃO DE CELULAR <<<
+  function validaCelular (x){
+
+    ddd = x.value.substring(1,3);
+
+    if(x.value.length < 15){
+      return false;
+    }
+
+    switch(ddd){
+        case '11':
+        case '12':
+        case '13':
+        case '14':
+        case '15':
+        case '16':
+        case '17':
+        case '18':
+        case '19':
+        case '21':
+        case '22':
+        case '24':
+        case '27':
+        case '28':
+        case '31':
+        case '32':
+        case '33':
+        case '34':
+        case '35':
+        case '37':
+        case '38':
+        case '41':
+        case '42':
+        case '43':
+        case '44':
+        case '45':
+        case '46':
+        case '47':
+        case '48':
+        case '49':
+        case '51':
+        case '53':
+        case '54':
+        case '55':
+        case '61':
+        case '62':
+        case '63':
+        case '64':
+        case '65':
+        case '66':
+        case '67':
+        case '68':
+        case '69':
+        case '71':
+        case '73':
+        case '74':
+        case '75':
+        case '77':
+        case '79':
+        case '81':
+        case '82':
+        case '83':
+        case '84':
+        case '85':
+        case '86':
+        case '87':
+        case '88':
+        case '89':
+        case '91':
+        case '92':
+        case '93':
+        case '94':
+        case '95':
+        case '96':
+        case '97':
+        case '98':
+        case '99':
+          return true;
+
+          break;
+        default:
+          return false;
+    }
+  }
 
   // VALIDAÇÃO DOS CAMPOS
-  var nome = document.getElementById('nome')
+  document.addEventListener('click', function (){
 
-  var cpf = document.getElementById('cpf');
+    var nome = document.getElementById('nome');
 
-  var email = document.getElementById('email');
+    var cpf = document.getElementById('cpf');
+  
+    var email = document.getElementById('email');
+  
+    var nascimento = document.getElementById('dataNascimento');
+  
+    var celular = document.getElementById('celular');
+    
+    var botao = document.getElementById('btn-cadastrar');
 
-  email.addEventListener('blur', function (){
-    console.log(validaEmail(email))
-    // if(validaEmail(email) == undefined){
-    //   email.style.background = 'rgba(255, 205, 205, 0.479)'
-    // } else {
-    //   email.style.background = 'transparent'
-    // }
-  })
+    email.addEventListener('blur', function (){
 
-  nome.addEventListener('blur', function (){
-    if(validaNome(nome) == undefined){
-      nome.style.background = 'rgba(255, 205, 205, 0.479)'
+      if(validaEmail(email) != true){
+        email.style.background = 'rgba(255, 205, 205, 0.479)';
+      } else {
+        email.style.background = 'transparent';
+      }
+    })
+  
+    nome.addEventListener('blur', function (){
+      
+      if(validaNome(nome) != true){
+        nome.style.background = 'rgba(255, 205, 205, 0.479)';
+      } else {
+        nome.style.background = 'transparent';
+      }
+    })
+  
+    cpf.addEventListener('blur', function (){
+  
+      if(validaCpf(cpf) != true){
+        cpf.style.background = 'rgba(255, 205, 205, 0.479)';
+      } else {
+        cpf.style.background = 'transparent';
+      }
+    })
+  
+    nascimento.addEventListener('blur', function (){
+  
+      if(validaNascimento(nascimento) != true){
+        nascimento.style.background = 'rgba(255, 205, 205, 0.479)';
+      } else {
+        nascimento.style.background = 'transparent';
+      }
+    })
+  
+    celular.addEventListener('blur', function (){
+  
+      if(validaCelular(celular) != true){
+        celular.style.background = 'rgba(255, 205, 205, 0.479)';
+      } else {
+        celular.style.background = 'transparent';
+      }
+    })
+
+    if((validaNome(nome) == true) & (validaEmail(email) == true) && (validaCpf(cpf) == true) && (validaNascimento(nascimento) == true) && (validaCelular(celular) == true)){
+      botao.removeAttribute('disabled');
     } else {
-      nome.style.background = 'transparent';
+      botao.setAttribute('disabled', 'disabled');
     }
   })
 

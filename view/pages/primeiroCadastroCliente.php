@@ -30,6 +30,14 @@
   </div>
 </nav>
     <div class="container-block">
+      <div class="row row-error">
+        <div class="container-error">
+          <div class="container">
+            <!-- <p class="erro-cpf">O CPF <a class="var-erro text-center">558.160.068-60</a> já esta cadastrado em nossa base de dados</p> -->
+              <p class="erro-email">O E-mail <a class="var-erro"> viniciustestapassos@gmail.com</a> já esta cadastrado em nossa base de dados</p>
+          </div>
+        </div>
+      </div>
       <div class="container-content">
         <div class="container">
           <div class="row">
@@ -42,7 +50,7 @@
                 <input type="text" name="cpf" placeholder="CPF" id="cpf" class="smallInput inputText ms-md-3 mt-5" maxlength="14">
                 <input type="text" name="nascimento" id="dataNascimento" placeholder="Data de Nascimento" class="inputText dataNascimento ms-md-3 mt-5">
                 <input type="text" id="celular" name="celular" placeholder="Celular ddd + numero" maxlength="15" class="mt-5 smallInput ms-md-3">
-                <button type="submit" name="btn-cadastrar-first" class="botao-cadastrar ms-md-3 col-md-12 disabled"><span class="btnText">PRÓXIMO <i class="fas fa-angle-right"></i></span></button>
+                <button type="submit" disabled name="btn-cadastrar-first" id="btn-cadastrar" class="botao-cadastrar ms-md-3 col-md-12 disabled"><span class="btnText">PRÓXIMO <i class="fas fa-angle-right"></i></span></button>
                 
               </form>
             </div>
@@ -62,6 +70,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
     <!-- Option 1: Bootstrap Bundle with Popper -->

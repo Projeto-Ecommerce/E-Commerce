@@ -13,6 +13,7 @@ body{
     width: 100%;
     height: 100vh;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-image: url('../images/fresh-vegetable-and-grilled-snail-sausage-arranged-in-circular-frame.jpg');
     background-size: cover;
@@ -21,10 +22,32 @@ body{
     position: relative;
 }
 
+.row-error{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-error{
+    width: 80%;
+    height: 100px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.var-erro{
+    color: red;
+    text-decoration: none;
+}
+
 .container-content{
     width: 80%;
     height: 70%;
-    border-radius: 5px;
+    border-radius: 3px;
     background-image: url("../images/fundo-2010x2010.jpg");
     display: flex;
     align-items: center;
@@ -94,6 +117,7 @@ body{
     z-index: 2;
     position: relative;
 }
+
 
 
 .navbar{
@@ -215,6 +239,19 @@ body{
     .dataNascimento{
         width: 100%;
         margin: 0;
+    }
+
+    .container-content{
+        width: 90%;
+    }
+
+    .container-error{
+        width: 90%;
+    }
+
+    .container-block{
+        background-size: 1800px;
+        background-position-x: -500px;
     }
 
     .smallInput{
