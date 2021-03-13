@@ -67,17 +67,17 @@ if(isset($_POST['btn-cadastrar-first'])){
     $verificaCampos = new \model\ClienteDao;
     $verificaCampos->verificaCampos($cliente);
 
-    // if(isset($_SESSION['var'])){
-    //     $var = $_SESSION['var'];
-    // }
+    if(isset($_SESSION['var'])){
+        $var = $_SESSION['var'];
+    }
 
         // INSERE NO BANCO DE DADOS
-    // if(!isset($var)){
-    //     $cadastrarCliente = new \model\ClienteDao;
-    //     $cadastrarCliente->cadastroInicialCliente($cliente);
-    // }else{
-    //     echo 'Erro no cadastro tente novamente!';
-    // }
+    if(!isset($var)){
+        $cadastrarCliente = new \model\ClienteDao;
+        $cadastrarCliente->cadastroInicialCliente($cliente);
+    }else{
+        echo 'Erro no cadastro tente novamente!';
+    }
 
     $contato = new \model\contato;
     $contato->setCelular($celular);
