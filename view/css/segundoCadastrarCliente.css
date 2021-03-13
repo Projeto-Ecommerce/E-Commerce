@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container-block{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/fresh-vegetable-and-grilled-snail-sausage-arranged-in-circular-frame.jpg');
+    background-size: cover;
+    background-position-y: -100px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.container-content{
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background-image: url("../images/fundo-2010x2010.jpg");
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.tittle-forms{
+    font-size: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;
+    font-family: Roboto, sans-serif;
+    font-size: 80%;
+}
+
+.inputText{
+    border: 1px solid rgb(202, 202, 202);
+    background-color: rgb(241, 241, 241);
+    outline: none;
+    width: 90%;
+    padding: 5px;
+    border: linear-gradient(to right, red, purple);
+}
+
+.orgemissor{
+    position: relative;
+}
+
+.smallInput{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    width: 45%;
+    padding: 5px;
+}
+
+.smallInput:hover{
+    animation-name: inputFocus;
+    animation-duration: 300ms;
+    animation-fill-mode: both;
+}
+
+.row-radios{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.col-radios{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    background-color: rgb(238, 237, 237);
+}
+
+.logo{
+    width: 50px;
+    height: auto;
+}
+
+.forms{
+    width: 100%;
+}
+
+@media screen and (max-width: 1400px){
+    .container-content{
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .dataNascimento{
+        width: 100%;
+        margin: 0;
+    }
+
+    .smallInput{
+        width: 100%;
+    }
+
+    .inputText{
+        width: 100%;
+    }
+}

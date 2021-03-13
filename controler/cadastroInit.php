@@ -45,8 +45,16 @@ if(isset($_POST['btn-cadastrar-first'])){
     $email = strtolower($email);
     $nome = clear($_POST['nome']);
     $dataNascimento = $_POST['nascimento'];
+    $dataNascimento = explode("/", $dataNascimento);
+    $dia = $dataNascimento[0];
+    $mes = $dataNascimento[1];
+    $ano = $dataNascimento[2];
+    $dataNascimento = $ano . '-' . $mes . '-' . $dia;
     $celular = trataCelular($_POST['celular']);
-
+    
+    $ddd = substr($celular, 0, 2);
+    $celular = substr($celular, 2);
+    $celular = '('.$ddd.') '.$celular;
     $cpfCorrecao = $_POST['cpf'];
 
     $_SESSION['nome'] = $_POST['nome'];

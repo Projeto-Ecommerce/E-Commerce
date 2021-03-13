@@ -58,4 +58,26 @@ Class Cliente {
     function setCelular($celular) {
         $this->celular = $celular;
     }
+
+    function getIdCliente() {
+        return $this->idCliente;
+    }
+
+    function setIdCliente($nomeCliente) {
+        $sql = "SELECT * FROM cliente WHERE nomeCliente = ?";
+
+        $stmt = Conn::getConn()->prepare($sql);
+        $stmt->bindValue(1, $nomeCliente);
+        
+        $stmt->execute();
+
+        $stmtRows = $stmt->rowCount();
+        $resultado = $stmt->fetchAll();
+
+        if($stmtRows != 0){
+            // var_dump($resultado);
+            // echo '<br><br>'.$resultado[0]['idCliente'].'<br><br>';
+            $this->idCliente = $resultado[0]['idCliente'];
+        }
+    }
 }

@@ -1,7 +1,8 @@
 <?php
+    $k = 0;
     $j = 0;
     while($j == 0){
-
+        
         $cpf = '';
         $i = 0;
         while($i < 11){
@@ -60,7 +61,7 @@
             $valorFinal = $verificaFirst.$verificaTwo;
 
             $verificaValues = substr($cpf, 9,2);
-
+            
             if($verificaValues == $valorFinal){
                 $j = 1;
                 echo $cpf;

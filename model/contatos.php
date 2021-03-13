@@ -2,9 +2,10 @@
 
 namespace model;
 
+require_once ('requires.php');
 Class contato {
 
-    private $Celular, $idCliente_contato, $idEndereço_contato, $idFornecedor_contato;
+    private $idCliente, $Celular, $idCliente_contato, $idEndereço_contato, $idFornecedor_contato;
 
     function getCelular (){
         return $this->telCelular;
@@ -39,4 +40,4 @@ Class contato {
     function setIdfornecedor_contato ($idFornecedor_contato){
         $this->idFornecedor_contato = $idFornecedor_contato;
     }
-} 
+}

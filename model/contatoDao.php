@@ -6,13 +6,11 @@ require_once ('requires.php');
 
 Class contatoDao {
 
-    function createContato (Contato $C){
+    function createContato (Contato $c){
 
         // VERIFICAR SE OS NUMEROS SÃO VALIDOS E JÁ FORAM CADASTRADOS
-        $celular = $C->getCelular();
-        echo $celular;
+        $celular = $c->getCelular();
         $ddd = substr($celular, 1, 2);
-        echo '<br><br>'.$ddd;
             switch($ddd){
                 case 11:
                 case 12:
@@ -82,10 +80,41 @@ Class contatoDao {
                 case 98:
                 case 99:
                     // ADICIONAR O CONTATO AO DB
-                        $sql = "INSERT INTO contatos (numero, tipoUsuario, )";
                     // ADICIONAR O ID NA CHAVE PRIMARIA DO CLIENTE
-
                     // ADICIONAR O ID NA CHAVE PRIMARIA DO FORNECEDOR
+                        $sql = "SELECT * FROM contatos WHERE numero = ?";
+
+                        $stmt = Conn::getConn()->prepare($sql);
+                        $stmt->bindValue(1, $c->getCelular());
+
+                        $stmt->execute();
+
+                        // $resultado = $stmt->fetchAll();
+
+                        $stmtRows = $stmt->rowCount();
+
+                        // echo $stmtRows;
+                        if($stmtRows == 0){
+                            $sql = "INSERT INTO contatos (numero, tipoUsuario, idCliente_contato)
+                            VALUES (?, ?, ?)";
+                    
+                            $stmt = Conn::getConn()->prepare($sql);
+                            $stmt->bindValue(1, $c->getCelular());
+                            $stmt->bindValue(2, '1');
+                            $stmt->bindValue(3, $c->getIdCliente());
+
+                            $resultado = $stmt->execute();
+
+                            $stmtRows = $stmt->rowCount();
+
+                            if($stmtRows == 0){
+                                // REDIRECIONA COM ERRO PARA A PAGINA INICIAL
+                                return $stmtRows;
+                            }
+                        } else {
+                            
+                        }
+
                     break;
                 default:
                     $_SESSION['error'] = 5;
